@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- DOT INACTIVE -->
+    <style name="DotInactive">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:background">@drawable/dot_inactive</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+
+    <!-- DOT ACTIVE -->
+    <style name="DotActive">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@drawable/dot_active</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+
+</resources>
