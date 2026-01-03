@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="revenue_filter">
+        <item>This Day</item>
+        <item>This Month</item>
+        <item>This Year</item>
+        <item>Custom</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ClothShop</string>
+    <string name="default_web_client_id" translatable="false">658937833222-msornk8d3jtga41prg0hfqg6f149794q.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://clothshop-64e1d-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">658937833222</string>
+    <string name="google_api_key" translatable="false">AIzaSyD7AapT_PUzuKB4IUgCVbCfcNck6q-3UM4</string>
+    <string name="google_app_id" translatable="false">1:658937833222:android:3125326f19346739e62087</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyD7AapT_PUzuKB4IUgCVbCfcNck6q-3UM4</string>
+    <string name="google_storage_bucket" translatable="false">clothshop-64e1d.firebasestorage.app</string>
+    <string name="project_id" translatable="false">clothshop-64e1d</string>
+    <style name="Base.Theme.ClothShop" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+
+        
+        
+    </style>
+    <style name="TagItem">
+        
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_height">32dp</item>
+
+        
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+        
+        <item name="android:textColor">@color/tag_text_selector</item>
+
+        
+        <item name="android:background">@drawable/bg_tag_selector</item>
+
+        
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="Theme.ClothShop" parent="Base.Theme.ClothShop"/>
+</resources>

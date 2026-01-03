@@ -20,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.admin.AdminProductActivity" />
+        <activity android:name=".activity.admin.AdminProductDetailActivity" />
 
     </application>
 

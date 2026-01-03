@@ -205,4 +205,12 @@ public class AdminProductAdapter
             layoutVariants = v.findViewById(R.id.layoutVariants);
         }
     }
+    // ================= GET ITEM FOR CLICK =================
+    public Product getItemAt(int position) {
+        if (position < 0 || position >= displayList.size()) {
+            return null;
+        }
+        return displayList.get(position);
+    }
+
 }

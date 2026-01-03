@@ -4,6 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -15,7 +18,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clothshop.R;
 import com.example.clothshop.adapter.admin.AdminProductAdapter;
+import com.example.clothshop.activity.admin.AdminProductDetailActivity;
 import com.example.clothshop.model.Product;
+import com.example.clothshop.model.Review;
 import com.example.clothshop.model.Variant;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ListenerRegistration;
@@ -52,9 +57,10 @@ public class AdminProductActivity extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-        listenProductsFromFirestore();
-        setupBottomNavigation();
+        listenProducts();
         setupSearchAndTagFilter();
+        setupBottomNavigation();
+        setupItemClick(); // 🔥 THÊM DUY NHẤT
     }
 
     private void bindViews() {
@@ -64,8 +70,8 @@ public class AdminProductActivity extends AppCompatActivity {
         layoutTags = findViewById(R.id.layoutTags);
     }
 
-    // ================= READ PRODUCTS + VARIANTS =================
-    private void listenProductsFromFirestore() {
+    // ================= LOAD PRODUCTS =================
+    private void listenProducts() {
         productListener = db.collection("products")
                 .addSnapshotListener((snapshots, e) -> {
                     if (e != null || snapshots == null) return;
@@ -80,29 +86,64 @@ public class AdminProductActivity extends AppCompatActivity {
                         p.setVariants(new ArrayList<>());
                         productList.add(p);
 
-                        // 🔥 LOAD VARIANTS SUBCOLLECTION
-                        db.collection("products")
-                                .document(p.getId())
-                                .collection("variants")
-                                .get()
-                                .addOnSuccessListener(qs -> {
-                                    List<Variant> variants = new ArrayList<>();
-                                    qs.getDocuments().forEach(vDoc -> {
-                                        Variant v = vDoc.toObject(Variant.class);
-                                        if (v != null) variants.add(v);
-                                    });
-                                    p.setVariants(variants);
-                                    adapter.notifyDataSetChanged();
-                                });
+                        loadVariants(p);
+                        loadReviews(p);
                     });
 
                     adapter.filter(currentKeyword, currentTag);
                 });
     }
 
-    // ================= SEARCH + TAG FILTER =================
-    private void setupSearchAndTagFilter() {
+    // ================= LOAD VARIANTS =================
+    private void loadVariants(Product p) {
+        db.collection("products")
+                .document(p.getId())
+                .collection("variants")
+                .get()
+                .addOnSuccessListener(qs -> {
+                    List<Variant> variants = new ArrayList<>();
+                    qs.getDocuments().forEach(vDoc -> {
+                        Variant v = vDoc.toObject(Variant.class);
+                        if (v != null) variants.add(v);
+                    });
+                    p.setVariants(variants);
+                    adapter.notifyDataSetChanged();
+                });
+    }
 
+    // ================= LOAD REVIEWS =================
+    private void loadReviews(Product p) {
+        db.collection("products")
+                .document(p.getId())
+                .collection("reviews")
+                .get()
+                .addOnSuccessListener(qs -> {
+
+                    if (qs.isEmpty()) {
+                        p.setReviewStats(0, 0);
+                        adapter.notifyDataSetChanged();
+                        return;
+                    }
+
+                    double total = 0;
+                    int count = 0;
+
+                    for (var doc : qs.getDocuments()) {
+                        Review r = doc.toObject(Review.class);
+                        if (r != null) {
+                            total += r.getRating();
+                            count++;
+                        }
+                    }
+
+                    double avg = total / count;
+                    p.setReviewStats(avg, count);
+                    adapter.notifyDataSetChanged();
+                });
+    }
+
+    // ================= FILTER =================
+    private void setupSearchAndTagFilter() {
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s,int a,int b,int c){}
             @Override public void afterTextChanged(Editable s){}
@@ -115,16 +156,13 @@ public class AdminProductActivity extends AppCompatActivity {
         });
 
         for (int i = 0; i < layoutTags.getChildCount(); i++) {
-            TextView tagView = (TextView) layoutTags.getChildAt(i);
+            TextView tv = (TextView) layoutTags.getChildAt(i);
+            if ("ALL".equalsIgnoreCase(tv.getText().toString())) tv.setSelected(true);
 
-            if ("ALL".equalsIgnoreCase(tagView.getText().toString())) {
-                tagView.setSelected(true);
-            }
-
-            tagView.setOnClickListener(v -> {
-                currentTag = tagView.getText().toString();
+            tv.setOnClickListener(v -> {
+                currentTag = tv.getText().toString();
                 resetTagUI();
-                tagView.setSelected(true);
+                tv.setSelected(true);
                 adapter.filter(currentKeyword, currentTag);
             });
         }
@@ -141,6 +179,49 @@ public class AdminProductActivity extends AppCompatActivity {
             startActivity(new Intent(this, AdminMainActivity.class));
             finish();
         });
+    }
+
+    // ================= ITEM CLICK → DETAIL =================
+    private void setupItemClick() {
+        GestureDetector detector = new GestureDetector(
+                this,
+                new GestureDetector.SimpleOnGestureListener() {
+                    @Override
+                    public boolean onSingleTapUp(MotionEvent e) {
+                        return true;
+                    }
+                });
+
+        rvProducts.addOnItemTouchListener(
+                new RecyclerView.OnItemTouchListener() {
+                    @Override
+                    public boolean onInterceptTouchEvent(
+                            RecyclerView rv, MotionEvent e) {
+
+                        View child = rv.findChildViewUnder(e.getX(), e.getY());
+                        if (child != null && detector.onTouchEvent(e)) {
+                            int pos = rv.getChildAdapterPosition(child);
+                            if (pos != RecyclerView.NO_POSITION) {
+                                Product p = adapter.getItemAt(pos);
+
+                                Intent i = new Intent(
+                                        AdminProductActivity.this,
+                                        AdminProductDetailActivity.class
+                                );
+                                i.putExtra("productId", p.getId());
+                                startActivity(i);
+                            }
+                        }
+                        return false;
+                    }
+
+                    @Override public void onTouchEvent(
+                            RecyclerView rv, MotionEvent e) {}
+
+                    @Override public void onRequestDisallowInterceptTouchEvent(
+                            boolean disallowIntercept) {}
+                }
+        );
     }
 
     @Override

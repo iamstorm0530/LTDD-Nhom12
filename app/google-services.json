@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "658937833222",
+    "firebase_url": "https://clothshop-64e1d-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "clothshop-64e1d",
+    "storage_bucket": "clothshop-64e1d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:658937833222:android:3125326f19346739e62087",
+        "android_client_info": {
+          "package_name": "com.example.clothshop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "658937833222-0kv7nkq8f8g6ov1jtocgte6718ndcu0n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clothshop",
+            "certificate_hash": "e6210924b36fa2a938c9705f988a91c7a1b48404"
+          }
+        },
+        {
+          "client_id": "658937833222-af59rnn3st3gv50ejgq7gjt6755d6lmi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.clothshop",
+            "certificate_hash": "7211dec081bc2469488189fd7ed7c0f1fd53569a"
+          }
+        },
+        {
+          "client_id": "658937833222-msornk8d3jtga41prg0hfqg6f149794q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7AapT_PUzuKB4IUgCVbCfcNck6q-3UM4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "658937833222-msornk8d3jtga41prg0hfqg6f149794q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
