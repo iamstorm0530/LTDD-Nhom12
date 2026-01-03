@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.clothshop.R;
 import com.example.clothshop.adapter.admin.AdminProductAdapter;
 import com.example.clothshop.model.Product;
+import com.example.clothshop.model.Variant;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.ListenerRegistration;
 
@@ -35,7 +36,6 @@ public class AdminProductActivity extends AppCompatActivity {
     private FirebaseFirestore db;
     private ListenerRegistration productListener;
 
-    // 🔥 filter state
     private String currentTag = "ALL";
     private String currentKeyword = "";
 
@@ -54,7 +54,7 @@ public class AdminProductActivity extends AppCompatActivity {
 
         listenProductsFromFirestore();
         setupBottomNavigation();
-        setupSearchAndTagFilter(); // ✅ chỉ thêm – không phá
+        setupSearchAndTagFilter();
     }
 
     private void bindViews() {
@@ -64,7 +64,7 @@ public class AdminProductActivity extends AppCompatActivity {
         layoutTags = findViewById(R.id.layoutTags);
     }
 
-    // 🔥 READ FIRESTORE REALTIME (GIỮ NGUYÊN)
+    // ================= READ PRODUCTS + VARIANTS =================
     private void listenProductsFromFirestore() {
         productListener = db.collection("products")
                 .addSnapshotListener((snapshots, e) -> {
@@ -74,10 +74,26 @@ public class AdminProductActivity extends AppCompatActivity {
 
                     snapshots.getDocuments().forEach(doc -> {
                         Product p = doc.toObject(Product.class);
-                        if (p != null) {
-                            p.id = doc.getId();
-                            productList.add(p);
-                        }
+                        if (p == null) return;
+
+                        p.setId(doc.getId());
+                        p.setVariants(new ArrayList<>());
+                        productList.add(p);
+
+                        // 🔥 LOAD VARIANTS SUBCOLLECTION
+                        db.collection("products")
+                                .document(p.getId())
+                                .collection("variants")
+                                .get()
+                                .addOnSuccessListener(qs -> {
+                                    List<Variant> variants = new ArrayList<>();
+                                    qs.getDocuments().forEach(vDoc -> {
+                                        Variant v = vDoc.toObject(Variant.class);
+                                        if (v != null) variants.add(v);
+                                    });
+                                    p.setVariants(variants);
+                                    adapter.notifyDataSetChanged();
+                                });
                     });
 
                     adapter.filter(currentKeyword, currentTag);
@@ -87,7 +103,6 @@ public class AdminProductActivity extends AppCompatActivity {
     // ================= SEARCH + TAG FILTER =================
     private void setupSearchAndTagFilter() {
 
-        // 🔍 search realtime
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s,int a,int b,int c){}
             @Override public void afterTextChanged(Editable s){}
@@ -99,11 +114,9 @@ public class AdminProductActivity extends AppCompatActivity {
             }
         });
 
-        // 🏷 tag click (DÙNG selected state – KHÔNG drawable)
         for (int i = 0; i < layoutTags.getChildCount(); i++) {
             TextView tagView = (TextView) layoutTags.getChildAt(i);
 
-            // mặc định ALL được chọn
             if ("ALL".equalsIgnoreCase(tagView.getText().toString())) {
                 tagView.setSelected(true);
             }
@@ -111,27 +124,21 @@ public class AdminProductActivity extends AppCompatActivity {
             tagView.setOnClickListener(v -> {
                 currentTag = tagView.getText().toString();
                 resetTagUI();
-                tagView.setSelected(true); // ✅ CHUẨN
+                tagView.setSelected(true);
                 adapter.filter(currentKeyword, currentTag);
             });
         }
     }
 
-    // ❌ KHÔNG set background nữa
-    // ✅ chỉ reset selected state
     private void resetTagUI() {
         for (int i = 0; i < layoutTags.getChildCount(); i++) {
-            TextView tv = (TextView) layoutTags.getChildAt(i);
-            tv.setSelected(false);
+            ((TextView) layoutTags.getChildAt(i)).setSelected(false);
         }
     }
 
     private void setupBottomNavigation() {
         navDashboard.setOnClickListener(v -> {
-            startActivity(new Intent(
-                    AdminProductActivity.this,
-                    AdminMainActivity.class
-            ));
+            startActivity(new Intent(this, AdminMainActivity.class));
             finish();
         });
     }
@@ -139,8 +146,6 @@ public class AdminProductActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (productListener != null) {
-            productListener.remove();
-        }
+        if (productListener != null) productListener.remove();
     }
 }
