@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClothShop</string>
+    <string-array name="revenue_filter">
+        <item>This Day</item>
+        <item>This Month</item>
+        <item>This Year</item>
+        <item>Custom</item>
+    </string-array>
+</resources>
