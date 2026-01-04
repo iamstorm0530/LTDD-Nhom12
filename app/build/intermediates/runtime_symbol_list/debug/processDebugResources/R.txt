@@ -2443,7 +2443,10 @@ int color switch_thumb_material_dark 0x7f0603b6
 int color switch_thumb_material_light 0x7f0603b7
 int color switch_thumb_normal_material_dark 0x7f0603b8
 int color switch_thumb_normal_material_light 0x7f0603b9
+int color tag_text_green_selector 0x7f0603be
+int color tag_text_red_selector 0x7f0603bf
 int color tag_text_selector 0x7f0603ba
+int color tag_text_yellow_selector 0x7f0603c0
 int color tooltip_background_dark 0x7f0603bb
 int color tooltip_background_light 0x7f0603bc
 int color white 0x7f0603bd
@@ -3563,10 +3566,14 @@ int drawable bg_chip_blue 0x7f08007a
 int drawable bg_chip_green 0x7f08007b
 int drawable bg_chip_red 0x7f08007c
 int drawable bg_chip_yellow 0x7f08010a
+int drawable bg_popup_sort 0x7f08010e
 int drawable bg_search 0x7f08007d
 int drawable bg_size_green 0x7f08010b
 int drawable bg_size_red 0x7f08010c
+int drawable bg_tag_green_selector 0x7f08010f
+int drawable bg_tag_red_selector 0x7f080110
 int drawable bg_tag_selector 0x7f08007e
+int drawable bg_tag_yellow_selector 0x7f080111
 int drawable btn_checkbox_checked_mtrl 0x7f08007f
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f080080
 int drawable btn_checkbox_unchecked_mtrl 0x7f080081
@@ -3614,6 +3621,7 @@ int drawable ic_clock_black_24dp 0x7f0800aa
 int drawable ic_dashboard 0x7f0800ab
 int drawable ic_expand_less_22px 0x7f0800ac
 int drawable ic_expand_more_22px 0x7f0800ad
+int drawable ic_filter 0x7f08010d
 int drawable ic_keyboard_black_24dp 0x7f0800ae
 int drawable ic_launcher_background 0x7f0800af
 int drawable ic_launcher_foreground 0x7f0800b0
@@ -3814,6 +3822,7 @@ int id bounceBoth 0x7f090068
 int id bounceEnd 0x7f090069
 int id bounceStart 0x7f09006a
 int id btnBack 0x7f09006b
+int id btnSort 0x7f090235
 int id buttonPanel 0x7f09006c
 int id cache_measures 0x7f09006d
 int id callMeasure 0x7f09006e
@@ -3958,6 +3967,7 @@ int id jumpToStart 0x7f0900f8
 int id labeled 0x7f0900f9
 int id layout 0x7f0900fa
 int id layoutReviews 0x7f090233
+int id layoutStatusFilter 0x7f090236
 int id layoutTags 0x7f0900fb
 int id layoutVariants 0x7f09022e
 int id left 0x7f0900fc
@@ -4147,6 +4157,10 @@ int id snackbar_action 0x7f0901b3
 int id snackbar_text 0x7f0901b4
 int id snap 0x7f0901b5
 int id snapMargins 0x7f0901b6
+int id sortNameAsc 0x7f090237
+int id sortNameDesc 0x7f090238
+int id sortPriceAsc 0x7f090239
+int id sortPriceDesc 0x7f09023a
 int id south 0x7f0901b7
 int id spacer 0x7f0901b8
 int id special_effects_controller_view_tag 0x7f0901b9
@@ -4475,6 +4489,7 @@ int layout select_dialog_item_material 0x7f0c006d
 int layout select_dialog_multichoice_material 0x7f0c006e
 int layout select_dialog_singlechoice_material 0x7f0c006f
 int layout support_simple_spinner_dropdown_item 0x7f0c0070
+int layout window_admin_sort 0x7f0c0073
 int mipmap ic_launcher 0x7f0e0000
 int mipmap ic_launcher_round 0x7f0e0001
 int plurals mtrl_badge_content_description 0x7f0f0000
@@ -5120,7 +5135,10 @@ int style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Day 0x7f120
 int style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Window_Fullscreen 0x7f1201b7
 int style ShapeAppearanceOverlay_MaterialComponents_MaterialCalendar_Year 0x7f1201b8
 int style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox 0x7f1201b9
+int style TagGreenItem 0x7f1204d0
 int style TagItem 0x7f1201ba
+int style TagRedItem 0x7f1204d1
+int style TagYellowItem 0x7f1204d2
 int style TextAppearance_AppCompat 0x7f1201bb
 int style TextAppearance_AppCompat_Body1 0x7f1201bc
 int style TextAppearance_AppCompat_Body2 0x7f1201bd

@@ -1,5 +1,7 @@
 package com.example.clothshop.model;
 
+import com.google.firebase.firestore.Exclude;
+
 import java.util.List;
 
 public class Product {
@@ -16,6 +18,7 @@ public class Product {
     private int reviewCount;
 
     private List<String> images;
+    @Exclude
     private List<Variant> variants;
 
     public Product() {}

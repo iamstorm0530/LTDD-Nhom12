@@ -15,7 +15,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.clothshop.R;
 import com.example.clothshop.model.Product;
+import com.example.clothshop.model.SortType;
 import com.example.clothshop.model.Variant;
+import com.example.clothshop.utils.CurrencyUtils;
 
 import java.text.NumberFormat;
 import java.util.*;
@@ -25,6 +27,7 @@ public class AdminProductAdapter
 
     private final List<Product> productList;
     private final List<Product> displayList = new ArrayList<>();
+    private SortType currentSort = SortType.NONE;
 
     // ✅ THỨ TỰ SIZE CỐ ĐỊNH
     private static final List<String> SIZE_ORDER =
@@ -35,19 +38,79 @@ public class AdminProductAdapter
         displayList.addAll(productList);
     }
 
+    // ================= FILTER =================
     public void filter(String keyword, String tag) {
         displayList.clear();
+
         for (Product p : productList) {
             boolean matchTag = tag.equals("ALL")
                     || (p.getTag() != null && p.getTag().equalsIgnoreCase(tag));
-            boolean matchSearch = p.getName()
-                    .toLowerCase().contains(keyword.toLowerCase());
 
-            if (matchTag && matchSearch) displayList.add(p);
+            boolean matchSearch = p.getName() != null
+                    && p.getName().toLowerCase().contains(keyword.toLowerCase());
+
+            if (matchTag && matchSearch) {
+                displayList.add(p);
+            }
         }
+
+        applySort();
         notifyDataSetChanged();
     }
 
+    // ================= SORT =================
+    private void applySort() {
+        switch (currentSort) {
+            case PRICE_ASC:
+                displayList.sort(Comparator.comparingDouble(Product::getPrice));
+                break;
+
+            case PRICE_DESC:
+                displayList.sort((a, b) ->
+                        Double.compare(b.getPrice(), a.getPrice()));
+                break;
+
+            case NAME_ASC:
+                displayList.sort((a, b) ->
+                        a.getName().compareToIgnoreCase(b.getName()));
+                break;
+
+            case NAME_DESC:
+                displayList.sort((a, b) ->
+                        b.getName().compareToIgnoreCase(a.getName()));
+                break;
+
+            case STATUS_STOCK:
+                displayList.sort((a, b) -> {
+                    if (!a.getStatus().equalsIgnoreCase(b.getStatus())) {
+                        return a.getStatus().equalsIgnoreCase("active") ? -1 : 1;
+                    }
+                    return Integer.compare(
+                            stockRank(a.getTotalQuantity()),
+                            stockRank(b.getTotalQuantity())
+                    );
+                });
+                break;
+
+            case NONE:
+            default:
+                break;
+        }
+    }
+
+    private int stockRank(int qty) {
+        if (qty == 0) return 2;
+        if (qty < 30) return 1;
+        return 0;
+    }
+
+    public void setSort(SortType sortType) {
+        this.currentSort = sortType;
+        applySort();
+        notifyDataSetChanged();
+    }
+
+    // ================= VIEW =================
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(
@@ -64,49 +127,60 @@ public class AdminProductAdapter
 
         Product p = displayList.get(pos);
 
+        // ===== BASIC INFO =====
         h.tvName.setText(p.getName());
-        h.tvPrice.setText(formatCurrency(p.getPrice()));
+        h.tvPrice.setText(CurrencyUtils.format(p.getPrice()));
         h.tvStock.setText("Stock: " + p.getTotalQuantity());
         h.tvRating.setText(
                 p.getAverageRating() + " ★ (" + p.getReviewCount() + ")"
         );
 
         // ===== TAG =====
-        h.tvTag.setText(p.getTag().toUpperCase());
+        if (p.getTag() != null) {
+            h.tvTag.setText(p.getTag().toUpperCase());
+        }
 
-        // ===== STATUS (🔥 FIX Ở ĐÂY) =====
+        // ===== STATUS =====
         String status = p.getStatus();
-        h.tvStatus.setText(status.toUpperCase());
-
-        if ("hidden".equalsIgnoreCase(status)) {
+        if (status != null && status.equalsIgnoreCase("hidden")) {
+            h.tvStatus.setText("HIDDEN");
             h.tvStatus.setBackgroundResource(R.drawable.bg_chip_red);
             h.tvStatus.setTextColor(Color.RED);
         } else {
+            h.tvStatus.setText("ACTIVE");
             h.tvStatus.setBackgroundResource(R.drawable.bg_chip_green);
             h.tvStatus.setTextColor(Color.GREEN);
         }
 
         // ===== IMAGE =====
-        if (!p.getImages().isEmpty()) {
+        if (p.getImages() != null && !p.getImages().isEmpty()) {
             Glide.with(h.itemView.getContext())
                     .load(p.getImages().get(0))
                     .centerCrop()
                     .into(h.imgProduct);
         }
 
-        // 🔥 CLEAR VARIANTS CŨ
+        // ================= VARIANTS (🔥 FIX NPE + GIỮ COLOR SIZE) =================
         h.layoutVariants.removeAllViews();
 
-        // 🔥 GROUP VARIANTS THEO COLOR
+        // 🔥 FIX CỐT LÕI: variants KHÔNG BAO GIỜ NULL
+        if (p.getVariants() == null) {
+            p.setVariants(new ArrayList<>());
+        }
+
+        // GROUP VARIANTS THEO COLOR
         Map<String, Map<String, Variant>> colorMap = new LinkedHashMap<>();
 
         for (Variant v : p.getVariants()) {
+            if (v == null) continue;
+            if (v.getColor() == null || v.getSize() == null) continue;
+
             colorMap
                     .computeIfAbsent(v.getColor(), k -> new HashMap<>())
                     .put(v.getSize(), v);
         }
 
-        // 🔥 RENDER TỪNG COLOR
+        // RENDER TỪNG COLOR + SIZE
         for (String color : colorMap.keySet()) {
             h.layoutVariants.addView(
                     createColorRow(
@@ -134,7 +208,6 @@ public class AdminProductAdapter
         tvColor.setWidth(dp(ctx, 48));
         tvColor.setTextSize(12);
         tvColor.setTextColor(Color.parseColor("#1C1C1E"));
-
         row.addView(tvColor);
 
         LinearLayout sizeWrap = new LinearLayout(ctx);
@@ -175,12 +248,6 @@ public class AdminProductAdapter
                 .getDisplayMetrics().density);
     }
 
-    private String formatCurrency(double v) {
-        return NumberFormat
-                .getInstance(new Locale("vi", "VN"))
-                .format(v) + " ₫";
-    }
-
     @Override
     public int getItemCount() {
         return displayList.size();
@@ -205,6 +272,7 @@ public class AdminProductAdapter
             layoutVariants = v.findViewById(R.id.layoutVariants);
         }
     }
+
     // ================= GET ITEM FOR CLICK =================
     public Product getItemAt(int position) {
         if (position < 0 || position >= displayList.size()) {
@@ -212,5 +280,4 @@ public class AdminProductAdapter
         }
         return displayList.get(position);
     }
-
 }

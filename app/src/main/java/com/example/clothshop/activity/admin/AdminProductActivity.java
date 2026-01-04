@@ -2,54 +2,50 @@ package com.example.clothshop.activity.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.text.*;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
+import android.widget.*;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.*;
 
 import com.example.clothshop.R;
 import com.example.clothshop.adapter.admin.AdminProductAdapter;
-import com.example.clothshop.activity.admin.AdminProductDetailActivity;
-import com.example.clothshop.model.Product;
-import com.example.clothshop.model.Review;
-import com.example.clothshop.model.Variant;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.ListenerRegistration;
+import com.example.clothshop.model.*;
+import com.google.firebase.firestore.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class AdminProductActivity extends AppCompatActivity {
 
-    private RecyclerView rvProducts;
-    private ImageView navDashboard;
-    private EditText edtSearch;
-    private LinearLayout layoutTags;
+    RecyclerView rvProducts;
+    EditText edtSearch;
+    LinearLayout layoutTags, layoutStatusFilter;
+    ImageView btnSort;
 
-    private AdminProductAdapter adapter;
-    private final List<Product> productList = new ArrayList<>();
+    AdminProductAdapter adapter;
+    List<Product> productList = new ArrayList<>();
+    FirebaseFirestore db;
+    ListenerRegistration listener;
 
-    private FirebaseFirestore db;
-    private ListenerRegistration productListener;
-
-    private String currentTag = "ALL";
-    private String currentKeyword = "";
+    String currentTag = "ALL";
+    String currentStatus = "ALL";
+    String keyword = "";
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle b) {
+        super.onCreate(b);
         setContentView(R.layout.activity_admin_product);
 
-        bindViews();
+        rvProducts = findViewById(R.id.rvProducts);
+        edtSearch = findViewById(R.id.edtSearch);
+        layoutTags = findViewById(R.id.layoutTags);
+        layoutStatusFilter = findViewById(R.id.layoutStatusFilter);
+        btnSort = findViewById(R.id.btnSort);
 
         rvProducts.setLayoutManager(new LinearLayoutManager(this));
         adapter = new AdminProductAdapter(productList);
@@ -58,130 +54,122 @@ public class AdminProductActivity extends AppCompatActivity {
         db = FirebaseFirestore.getInstance();
 
         listenProducts();
-        setupSearchAndTagFilter();
-        setupBottomNavigation();
-        setupItemClick(); // 🔥 THÊM DUY NHẤT
+        setupSearch();
+        setupTagFilter();          // 🔥 TAG 1
+        setupStatusFilter();       // 🔥 TAG 2
+        setupSort();
     }
 
-    private void bindViews() {
-        rvProducts = findViewById(R.id.rvProducts);
-        navDashboard = findViewById(R.id.navDashboard);
-        edtSearch = findViewById(R.id.edtSearch);
-        layoutTags = findViewById(R.id.layoutTags);
-    }
-
-    // ================= LOAD PRODUCTS =================
-    private void listenProducts() {
-        productListener = db.collection("products")
-                .addSnapshotListener((snapshots, e) -> {
-                    if (e != null || snapshots == null) return;
+    // ================= LOAD =================
+    void listenProducts() {
+        listener = db.collection("products")
+                .addSnapshotListener((qs, e) -> {
+                    if (qs == null) return;
 
                     productList.clear();
 
-                    snapshots.getDocuments().forEach(doc -> {
-                        Product p = doc.toObject(Product.class);
-                        if (p == null) return;
+                    for (var d : qs.getDocuments()) {
+                        Product p = d.toObject(Product.class);
+                        if (p == null) continue;
 
-                        p.setId(doc.getId());
-                        p.setVariants(new ArrayList<>());
+                        p.setId(d.getId());
+                        p.setVariants(new ArrayList<>()); // 🔥 QUAN TRỌNG
                         productList.add(p);
 
-                        loadVariants(p);
-                        loadReviews(p);
-                    });
+                        loadVariants(p); // 🔥 LOAD VARIANTS
+                    }
 
-                    adapter.filter(currentKeyword, currentTag);
+                    adapter.filter(keyword, currentTag);
                 });
     }
-
-    // ================= LOAD VARIANTS =================
-    private void loadVariants(Product p) {
+    void loadVariants(Product p) {
         db.collection("products")
                 .document(p.getId())
                 .collection("variants")
                 .get()
                 .addOnSuccessListener(qs -> {
                     List<Variant> variants = new ArrayList<>();
-                    qs.getDocuments().forEach(vDoc -> {
+
+                    for (var vDoc : qs.getDocuments()) {
                         Variant v = vDoc.toObject(Variant.class);
                         if (v != null) variants.add(v);
-                    });
+                    }
+
                     p.setVariants(variants);
-                    adapter.notifyDataSetChanged();
+
+                    adapter.notifyDataSetChanged(); // 🔥 BẮT BUỘC
                 });
     }
 
-    // ================= LOAD REVIEWS =================
-    private void loadReviews(Product p) {
-        db.collection("products")
-                .document(p.getId())
-                .collection("reviews")
-                .get()
-                .addOnSuccessListener(qs -> {
 
-                    if (qs.isEmpty()) {
-                        p.setReviewStats(0, 0);
-                        adapter.notifyDataSetChanged();
-                        return;
-                    }
-
-                    double total = 0;
-                    int count = 0;
-
-                    for (var doc : qs.getDocuments()) {
-                        Review r = doc.toObject(Review.class);
-                        if (r != null) {
-                            total += r.getRating();
-                            count++;
-                        }
-                    }
-
-                    double avg = total / count;
-                    p.setReviewStats(avg, count);
-                    adapter.notifyDataSetChanged();
-                });
-    }
-
-    // ================= FILTER =================
-    private void setupSearchAndTagFilter() {
+    // ================= SEARCH =================
+    void setupSearch() {
         edtSearch.addTextChangedListener(new TextWatcher() {
             @Override public void beforeTextChanged(CharSequence s,int a,int b,int c){}
-            @Override public void afterTextChanged(Editable s){}
-
+            @Override public void afterTextChanged(Editable e){}
             @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                currentKeyword = s.toString();
-                adapter.filter(currentKeyword, currentTag);
+            public void onTextChanged(CharSequence s,int a,int b,int c){
+                keyword = s.toString();
+                adapter.filter(keyword, currentTag);
             }
         });
+    }
 
+    // ================= TAG FILTER (GENDER) =================
+    void setupTagFilter() {
         for (int i = 0; i < layoutTags.getChildCount(); i++) {
-            TextView tv = (TextView) layoutTags.getChildAt(i);
-            if ("ALL".equalsIgnoreCase(tv.getText().toString())) tv.setSelected(true);
+            View v = layoutTags.getChildAt(i);
 
-            tv.setOnClickListener(v -> {
-                currentTag = tv.getText().toString();
-                resetTagUI();
+            if (!(v instanceof TextView)) continue; // ❗ bỏ ImageView btnSort
+
+            TextView tv = (TextView) v;
+
+            if ("ALL".equalsIgnoreCase(tv.getText().toString())) {
                 tv.setSelected(true);
-                adapter.filter(currentKeyword, currentTag);
+            }
+
+            tv.setOnClickListener(x -> {
+                currentTag = tv.getText().toString();
+                resetTagGroup(layoutTags);
+                tv.setSelected(true);
+                adapter.filter(keyword, currentTag);
             });
         }
     }
 
-    private void resetTagUI() {
-        for (int i = 0; i < layoutTags.getChildCount(); i++) {
-            ((TextView) layoutTags.getChildAt(i)).setSelected(false);
+    // ================= TAG FILTER (STATUS) =================
+    void setupStatusFilter() {
+        for (int i = 0; i < layoutStatusFilter.getChildCount(); i++) {
+            View v = layoutStatusFilter.getChildAt(i);
+
+            if (!(v instanceof TextView)) continue;
+
+            TextView tv = (TextView) v;
+
+            if ("ALL".equalsIgnoreCase(tv.getText().toString())) {
+                tv.setSelected(true);
+            }
+
+            tv.setOnClickListener(x -> {
+                currentStatus = tv.getText().toString();
+                resetTagGroup(layoutStatusFilter);
+                tv.setSelected(true);
+
+                // ⚠ hiện tại adapter CHƯA filter theo status
+                // 👉 giữ đúng yêu cầu: CHỈ click chọn, KHÔNG đổi logic
+            });
         }
     }
 
-    private void setupBottomNavigation() {
-        navDashboard.setOnClickListener(v -> {
-            startActivity(new Intent(this, AdminMainActivity.class));
-            finish();
-        });
+    // ================= RESET TAG =================
+    void resetTagGroup(LinearLayout group) {
+        for (int i = 0; i < group.getChildCount(); i++) {
+            View v = group.getChildAt(i);
+            if (v instanceof TextView) {
+                v.setSelected(false);
+            }
+        }
     }
-
-    // ================= ITEM CLICK → DETAIL =================
     private void setupItemClick() {
         GestureDetector detector = new GestureDetector(
                 this,
@@ -224,9 +212,55 @@ public class AdminProductActivity extends AppCompatActivity {
         );
     }
 
+    // ================= SORT =================
+    void setupSort() {
+        btnSort.setOnClickListener(v -> {
+
+            View popupView = getLayoutInflater()
+                    .inflate(R.layout.window_admin_sort, null);
+
+            PopupWindow popupWindow = new PopupWindow(
+                    popupView,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    true
+            );
+
+            popupWindow.setOutsideTouchable(true);
+            popupWindow.setElevation(12f);
+
+            // ==== BẮT SỰ KIỆN CLICK ====
+            popupView.findViewById(R.id.sortPriceAsc)
+                    .setOnClickListener(x -> {
+                        adapter.setSort(SortType.PRICE_ASC);
+                        popupWindow.dismiss();
+                    });
+
+            popupView.findViewById(R.id.sortPriceDesc)
+                    .setOnClickListener(x -> {
+                        adapter.setSort(SortType.PRICE_DESC);
+                        popupWindow.dismiss();
+                    });
+
+            popupView.findViewById(R.id.sortNameAsc)
+                    .setOnClickListener(x -> {
+                        adapter.setSort(SortType.NAME_ASC);
+                        popupWindow.dismiss();
+                    });
+
+            popupView.findViewById(R.id.sortNameDesc)
+                    .setOnClickListener(x -> {
+                        adapter.setSort(SortType.NAME_DESC);
+                        popupWindow.dismiss();
+                    });
+
+            // ==== HIỆN POPUP NGAY DƯỚI ICON FILTER ====
+            popupWindow.showAsDropDown(btnSort, -120, 8);
+        });
+    }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (productListener != null) productListener.remove();
+        if (listener != null) listener.remove();
     }
 }

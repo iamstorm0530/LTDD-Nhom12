@@ -92,6 +92,72 @@
                 android:text="UNISEX"
                 style="@style/TagItem"/>
 
+            <ImageView
+                android:id="@+id/btnSort"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@drawable/ic_filter"
+                android:padding="6dp"
+                android:contentDescription="Sort"
+                android:layout_marginEnd="12dp"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- ================= STATUS FILTER (HORIZONTAL SCROLL) ================= -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:overScrollMode="never"
+        android:fillViewport="false">
+
+        <LinearLayout
+            android:id="@+id/layoutStatusFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="6dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:text="ACTIVE"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="HIDDEN"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="OUT_OF_STOCK"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagRedItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="LOW_STOCK"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagYellowItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="IN_STOCK"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagGreenItem"
+                android:layout_marginEnd="10dp"/>
+
         </LinearLayout>
     </HorizontalScrollView>
 

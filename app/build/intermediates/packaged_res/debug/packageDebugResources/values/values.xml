@@ -24,6 +24,27 @@
         
         
     </style>
+    <style name="TagGreenItem">
+        
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_height">32dp</item>
+
+        
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+        
+        <item name="android:textColor">@color/tag_text_green_selector</item>
+
+        
+        <item name="android:background">@drawable/bg_tag_green_selector</item>
+
+        
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
     <style name="TagItem">
         
         <item name="android:layout_marginEnd">8dp</item>
@@ -40,6 +61,48 @@
 
         
         <item name="android:background">@drawable/bg_tag_selector</item>
+
+        
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="TagRedItem">
+        
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_height">32dp</item>
+
+        
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+        
+        <item name="android:textColor">@color/tag_text_red_selector</item>
+
+        
+        <item name="android:background">@drawable/bg_tag_red_selector</item>
+
+        
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="TagYellowItem">
+        
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_height">32dp</item>
+
+        
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+        
+        <item name="android:textColor">@color/tag_text_yellow_selector</item>
+
+        
+        <item name="android:background">@drawable/bg_tag_yellow_selector</item>
 
         
         <item name="android:clickable">true</item>

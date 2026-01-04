@@ -13,6 +13,7 @@ import com.example.clothshop.R;
 import com.example.clothshop.model.Product;
 import com.example.clothshop.model.Review;
 import com.example.clothshop.model.Variant;
+import com.example.clothshop.utils.CurrencyUtils;
 import com.example.clothshop.utils.VariantUIFactory;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -62,7 +63,7 @@ public class AdminProductDetailActivity extends AppCompatActivity {
                     if (p == null) return;
 
                     tvName.setText(p.getName());
-                    tvPrice.setText(formatCurrency(p.getPrice()));
+                    tvPrice.setText(CurrencyUtils.format(p.getPrice()));
                     tvRating.setText(p.getAverageRating() + " ★ (" + p.getReviewCount() + ")");
                     tvTag.setText(p.getTag().toUpperCase());
                     tvDescription.setText(p.getDescription());
@@ -134,10 +135,5 @@ public class AdminProductDetailActivity extends AppCompatActivity {
                         layoutReviews.addView(tv);
                     }
                 });
-    }
-
-    private String formatCurrency(double v) {
-        return NumberFormat.getInstance(new Locale("vi", "VN"))
-                .format(v) + " ₫";
     }
 }
