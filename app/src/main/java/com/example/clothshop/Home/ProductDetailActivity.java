@@ -10,67 +10,88 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.clothshop.R;
 import com.example.clothshop.model.Product;
+import com.example.clothshop.model.Variant;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class ProductDetailActivity extends AppCompatActivity {
 
-    // ====== STATE ======
+    // ===== STATE =====
     private boolean isExpanded = false;
     private String selectedSize = null;
-    private String selectedColor = "";
+    private String selectedColor = null;
+    private Variant selectedVariant = null;
 
-    // ====== VIEW ======
+    // ===== VIEW =====
     private TextView tvTotalPrice;
     private EditText edtQuantity;
     private TextView btnPlus, btnMinus;
+    private LinearLayout layoutSizes;
+    private Spinner spinnerColor;
 
-    // ====== DATA ======
+    // ===== DATA =====
     private double pricePerItem;
+    private TextView tvStock;
+    private final List<Variant> variants = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
 
-        // ====== GET PRODUCT ======
+        // ===== GET PRODUCT =====
         Product product = (Product) getIntent().getSerializableExtra("product");
         if (product == null) {
             finish();
             return;
         }
 
-        // ====== FIND VIEW ======
+        // ===== FIND VIEW =====
         ViewPager2 viewPagerImages = findViewById(R.id.viewPagerImages);
         TextView tvTag = findViewById(R.id.tvTag);
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
         TextView tvReadMore = findViewById(R.id.tvReadMore);
-        LinearLayout layoutSizes = findViewById(R.id.layoutSizes);
-        Spinner spinnerColor = findViewById(R.id.spinnerColor);
         Button btnAddToCart = findViewById(R.id.btnAddToCart);
+
+        layoutSizes = findViewById(R.id.layoutSizes);
+        spinnerColor = findViewById(R.id.spinnerColor);
 
         tvTotalPrice = findViewById(R.id.tvTotalPrice);
         edtQuantity = findViewById(R.id.edtQuantity);
         btnPlus = findViewById(R.id.btnPlus);
         btnMinus = findViewById(R.id.btnMinus);
 
-        // ====== SET BASIC DATA ======
-        tvTag.setText(product.tag);
-        tvName.setText(product.name);
-        tvDescription.setText(product.description);
+        // ===== BASIC DATA =====
+        tvTag.setText(product.getTag());
+        tvName.setText(product.getName());
+        tvDescription.setText(product.getDescription());
 
         pricePerItem = product.getPrice();
         edtQuantity.setText("1");
         updateTotalPrice(1);
 
-        viewPagerImages.setAdapter(new ImagePagerAdapter(this, product.images));
+        viewPagerImages.setAdapter(
+                new ImagePagerAdapter(this, product.getImages())
+        );
 
-        // ====== READ MORE ======
+        // Stock
+        tvStock = findViewById(R.id.tvStock);
+
+
+        // ===== READ MORE =====
         tvReadMore.setOnClickListener(v -> {
             if (!isExpanded) {
                 tvDescription.setMaxLines(Integer.MAX_VALUE);
@@ -84,65 +105,13 @@ public class ProductDetailActivity extends AppCompatActivity {
             isExpanded = !isExpanded;
         });
 
-        // ====== BACK ======
+        // ===== BACK =====
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
 
-        // ====== SIZE ======
-        if (product.sizes != null) {
-            for (String size : product.sizes) {
-                Button btnSize = new Button(this);
-                btnSize.setText(size);
-                btnSize.setAllCaps(false);
-                btnSize.setTextSize(12);
-                btnSize.setBackgroundColor(Color.parseColor("#EEEEEE"));
+        // ===== LOAD VARIANTS FROM FIRESTORE =====
+        loadVariants(product.getId());
 
-                LinearLayout.LayoutParams params =
-                        new LinearLayout.LayoutParams(
-                                LinearLayout.LayoutParams.WRAP_CONTENT,
-                                LinearLayout.LayoutParams.WRAP_CONTENT
-                        );
-                params.setMarginEnd(12);
-                btnSize.setLayoutParams(params);
-
-                btnSize.setOnClickListener(v -> {
-                    for (int i = 0; i < layoutSizes.getChildCount(); i++) {
-                        Button child = (Button) layoutSizes.getChildAt(i);
-                        child.setBackgroundColor(Color.parseColor("#EEEEEE"));
-                        child.setTextColor(Color.BLACK);
-                    }
-
-                    btnSize.setBackgroundColor(Color.parseColor("#222222"));
-                    btnSize.setTextColor(Color.WHITE);
-                    selectedSize = size;
-                });
-
-                layoutSizes.addView(btnSize);
-            }
-        }
-
-        // ====== COLOR ======
-        if (product.colors != null && !product.colors.isEmpty()) {
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(
-                    this,
-                    android.R.layout.simple_spinner_item,
-                    product.colors
-            );
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnerColor.setAdapter(adapter);
-
-            selectedColor = product.colors.get(0);
-            spinnerColor.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
-                @Override
-                public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
-                    selectedColor = product.colors.get(position);
-                }
-
-                @Override
-                public void onNothingSelected(android.widget.AdapterView<?> parent) {}
-            });
-        }
-
-        // ====== QUANTITY ======
+        // ===== QUANTITY =====
         btnPlus.setOnClickListener(v -> {
             int qty = Integer.parseInt(edtQuantity.getText().toString());
             qty++;
@@ -158,9 +127,142 @@ public class ProductDetailActivity extends AppCompatActivity {
                 updateTotalPrice(qty);
             }
         });
+
+        // ===== ADD TO CART =====
+        btnAddToCart.setOnClickListener(v -> {
+            if (selectedVariant == null) {
+                Toast.makeText(this, "Vui lòng chọn size và màu", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            // TODO: add selectedVariant + quantity vào cart
+        });
     }
 
-    // ====== UPDATE TOTAL ======
+    // ===== LOAD VARIANTS =====
+    private void loadVariants(String productId) {
+        FirebaseFirestore.getInstance()
+                .collection("products")
+                .document(productId)
+                .collection("variants")
+                .get()
+                .addOnSuccessListener(qs -> {
+                    variants.clear();
+
+                    Set<String> sizeSet = new HashSet<>();
+                    Set<String> colorSet = new HashSet<>();
+
+                    for (DocumentSnapshot doc : qs.getDocuments()) {
+                        Variant v = doc.toObject(Variant.class);
+                        if (v != null) {
+                            v.setId(doc.getId());
+                            variants.add(v);
+
+                            if (v.getSize() != null) sizeSet.add(v.getSize());
+                            if (v.getColor() != null) colorSet.add(v.getColor());
+                        }
+                    }
+
+                    renderSizes(sizeSet);
+                    renderColors(colorSet);
+                });
+    }
+
+    // ===== RENDER SIZE =====
+    private void renderSizes(Set<String> sizeSet) {
+        layoutSizes.removeAllViews();
+        if (sizeSet.isEmpty()) return;
+
+        for (String size : sizeSet) {
+            Button btnSize = new Button(this);
+            btnSize.setText(size);
+            btnSize.setAllCaps(false);
+            btnSize.setTextSize(12);
+            btnSize.setBackgroundColor(Color.parseColor("#EEEEEE"));
+
+            LinearLayout.LayoutParams params =
+                    new LinearLayout.LayoutParams(
+                            LinearLayout.LayoutParams.WRAP_CONTENT,
+                            LinearLayout.LayoutParams.WRAP_CONTENT
+                    );
+            params.setMarginEnd(12);
+            btnSize.setLayoutParams(params);
+
+            btnSize.setOnClickListener(v -> {
+                selectedSize = size;
+                highlightSelectedSize(btnSize);
+                resolveSelectedVariant();
+            });
+
+            layoutSizes.addView(btnSize);
+        }
+    }
+
+    private void highlightSelectedSize(Button selectedBtn) {
+        for (int i = 0; i < layoutSizes.getChildCount(); i++) {
+            Button b = (Button) layoutSizes.getChildAt(i);
+            b.setBackgroundColor(Color.parseColor("#EEEEEE"));
+            b.setTextColor(Color.BLACK);
+        }
+        selectedBtn.setBackgroundColor(Color.parseColor("#222222"));
+        selectedBtn.setTextColor(Color.WHITE);
+    }
+
+    // ===== RENDER COLOR =====
+    private void renderColors(Set<String> colorSet) {
+        if (colorSet.isEmpty()) return;
+
+        List<String> colors = new ArrayList<>(colorSet);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(
+                this,
+                android.R.layout.simple_spinner_item,
+                colors
+        );
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerColor.setAdapter(adapter);
+
+        selectedColor = colors.get(0);
+        resolveSelectedVariant();
+
+        spinnerColor.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(android.widget.AdapterView<?> parent, View view, int position, long id) {
+                selectedColor = colors.get(position);
+                resolveSelectedVariant();
+            }
+
+            @Override
+            public void onNothingSelected(android.widget.AdapterView<?> parent) {}
+        });
+    }
+
+    // ===== FIND SELECTED VARIANT =====
+    private void resolveSelectedVariant() {
+        selectedVariant = null;
+        for (Variant v : variants) {
+            if (v.getSize() != null && v.getColor() != null &&
+                    v.getSize().equals(selectedSize) &&
+                    v.getColor().equals(selectedColor)) {
+                selectedVariant = v;
+                break;
+            }
+        }
+        if (selectedVariant != null) {
+            int stock = selectedVariant.getQuantity();
+            tvStock.setText("Stock: " + stock);
+
+            // Optional: đổi màu nếu hết hàng
+            if (stock == 0) {
+                tvStock.setTextColor(Color.RED);
+            } else {
+                tvStock.setTextColor(Color.parseColor("#888888"));
+            }
+        } else {
+            tvStock.setText("Stock: -");
+        }
+
+    }
+
+    // ===== PRICE =====
     private void updateTotalPrice(int quantity) {
         double total = pricePerItem * quantity;
         tvTotalPrice.setText(formatPrice(total));

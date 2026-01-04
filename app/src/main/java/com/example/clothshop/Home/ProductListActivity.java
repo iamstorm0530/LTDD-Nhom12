@@ -3,8 +3,6 @@ package com.example.clothshop.Home;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -33,14 +31,16 @@ public class ProductListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.home_activity_product_list); // bạn đang có file này trong res/layout
+        setContentView(R.layout.home_activity_product_list);
 
+        // ===== RecyclerView =====
         listProducts = findViewById(R.id.listProducts);
         listProducts.setLayoutManager(new GridLayoutManager(this, 2));
 
         adapter = new ProductAdapter(this, data);
         listProducts.setAdapter(adapter);
 
+        // ===== Tabs =====
         tabAll = findViewById(R.id.tabAll);
         tabJacket = findViewById(R.id.tabJacket);
         tabShirt = findViewById(R.id.tabShirt);
@@ -53,20 +53,18 @@ public class ProductListActivity extends AppCompatActivity {
             tab.setOnClickListener(v -> selectTab(tab));
         }
 
-       // loadAllProducts();
-
-        // MALE
+        // ===== Load theo TAG nếu có =====
         String tag = getIntent().getStringExtra("TAG");
-        if (tag != null){
+        if (tag != null) {
             loadProductByTag(tag);
         } else {
             loadAllProducts();
         }
 
-        // Bắt sự kiện nút back
+        // ===== Back =====
         findViewById(R.id.btnBack).setOnClickListener(v -> finish());
 
-        // Bắt sự kiện nút iconHome
+        // ===== Home =====
         findViewById(R.id.imgHome).setOnClickListener(v -> {
             Intent intent = new Intent(ProductListActivity.this, HomeActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
@@ -74,30 +72,19 @@ public class ProductListActivity extends AppCompatActivity {
         });
     }
 
+    // ===== LOAD ALL =====
     private void loadAllProducts() {
         FirebaseFirestore.getInstance()
                 .collection("products")
                 .whereEqualTo("status", "active")
                 .get()
                 .addOnSuccessListener(qs -> {
-                    android.util.Log.d("PL", "docs=" + qs.size());
-
                     data.clear();
+
                     for (DocumentSnapshot doc : qs.getDocuments()) {
-
-                        String rawCat = doc.getString("categoryId");
-                        String rawStatus = doc.getString("status");
-
                         Product p = doc.toObject(Product.class);
-
-                        android.util.Log.d("PL",
-                                doc.getId()
-                                        + " rawCat=" + rawCat
-                                        + " mappedCat=" + (p != null ? p.categoryId : "null")
-                                        + " status=" + rawStatus);
-
                         if (p != null) {
-                            p.id = doc.getId();
+                            p.setId(doc.getId()); // ✅ FIX private
                             data.add(p);
                         }
                     }
@@ -105,40 +92,44 @@ public class ProductListActivity extends AppCompatActivity {
                     adapter.setOriginalList(data);
                     selectTab(tabAll);
                 })
-                .addOnFailureListener(e -> android.util.Log.e("PL", "load fail", e));
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Load product failed", Toast.LENGTH_SHORT).show()
+                );
     }
 
+    // ===== LOAD BY TAG (MALE / FEMALE ...) =====
     private void loadProductByTag(String tag) {
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-
-        db.collection("products")
+        FirebaseFirestore.getInstance()
+                .collection("products")
                 .whereEqualTo("tag", tag)
                 .whereEqualTo("status", "active")
                 .get()
-                .addOnSuccessListener(queryDocumentSnapshots -> {
+                .addOnSuccessListener(qs -> {
                     data.clear();
 
-                    for (DocumentSnapshot doc : queryDocumentSnapshots) {
-                        Product product = doc.toObject(Product.class);
-                        if (product != null) {
-                            data.add(product);
+                    for (DocumentSnapshot doc : qs.getDocuments()) {
+                        Product p = doc.toObject(Product.class);
+                        if (p != null) {
+                            p.setId(doc.getId()); // ✅ FIX private
+                            data.add(p);
                         }
                     }
 
                     adapter.setOriginalList(data);
+                    selectTab(tabAll);
                 })
-                .addOnFailureListener(e -> {
-                    Toast.makeText(this, "Load product failed", Toast.LENGTH_SHORT).show();
-                });
+                .addOnFailureListener(e ->
+                        Toast.makeText(this, "Load product failed", Toast.LENGTH_SHORT).show()
+                );
     }
 
-
-
+    // ===== TAB FILTER =====
     private void selectTab(TextView selectedTab) {
         for (TextView tab : tabs) {
             tab.setBackgroundResource(R.drawable.tab_unselected);
             tab.setTextColor(Color.BLACK);
         }
+
         selectedTab.setBackgroundResource(R.drawable.tab_selected);
         selectedTab.setTextColor(Color.WHITE);
 

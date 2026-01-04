@@ -53,17 +53,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
+                android:orientation="vertical"
                 android:layout_marginTop="4dp">
 
                 <TextView
                     android:id="@+id/tvName"
-                    android:layout_width="0dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:textSize="18sp"
                     android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stock: 0"
+                    android:textSize="13sp"
+                    android:textColor="#888888"
+                    android:layout_marginTop="2dp"/>
             </LinearLayout>
 
             <TextView

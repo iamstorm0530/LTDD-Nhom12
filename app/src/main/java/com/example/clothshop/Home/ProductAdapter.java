@@ -50,7 +50,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
             display.addAll(original);
         } else {
             for (Product p : original) {
-                String c = (p.categoryId == null) ? "null" : p.categoryId.trim();
+                String c = (p.getCategoryId() == null) ? "null" : p.getCategoryId().trim();
                 if (c.equalsIgnoreCase(target)) {
                     display.add(p);
                 }
@@ -82,10 +82,10 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
     public void onBindViewHolder(@NonNull VH h, int position) {
         Product p = display.get(position);
 
-        h.txtName.setText(p.name);
+        h.txtName.setText(p.getName());
 
         NumberFormat formatter = NumberFormat.getInstance(new Locale("vi", "VN"));
-        long priceVND = (long) p.price; // bạn đang lưu giá kiểu double; tự thống nhất đơn vị
+        long priceVND = (long) p.getPrice(); // bạn đang lưu giá kiểu double; tự thống nhất đơn vị
         h.txtPrice.setText(formatter.format(priceVND) + "đ");
 
         h.itemView.setOnClickListener(v -> {
@@ -96,7 +96,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
 
         // Lấy ảnh đại diện: ưu tiên images[0]
         String imageUrl = null;
-        if (p.images != null && !p.images.isEmpty()) imageUrl = p.images.get(0);
+        if (p.getImages() != null && !p.getImages().isEmpty()) imageUrl = p.getImages().get(0);
 
         Glide.with(context)
                 .load(imageUrl)

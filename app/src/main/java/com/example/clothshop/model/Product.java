@@ -4,35 +4,49 @@ import java.io.Serializable;
 import java.util.List;
 
 public class Product implements Serializable {
-    public String id;
-    public String name;
-    public double price;
 
-    public String categoryId;
-    public String tag;
+    private String id;
+    private String name;
+    private double price;
+    private String categoryId;
+    private String tag;
+    private String status;
+    private String description;
 
-    public List<String> sizes;
-    public List<String> colors;
+    private double averageRating;
+    private int reviewCount;
 
-    public int quantity;
-    public int soldCount;
+    private List<String> images;
+    private List<Variant> variants;
 
-    public double averageRating;
-    public int reviewCount;
+    public Product() {}
 
-    public List<String> images;
-    public String description;
-    public String status;
+    // ===== GETTERS =====
+    public String getId() { return id; }
+    public String getName() { return name; }
+    public double getPrice() { return price; }
+    public String getCategoryId() { return categoryId; }
+    public String getTag() { return tag; }
+    public String getStatus() { return status; }
+    public String getDescription() { return description; }
+    public double getAverageRating() { return averageRating; }
+    public int getReviewCount() { return reviewCount; }
+    public List<String> getImages() { return images; }
+    public List<Variant> getVariants() { return variants; }
 
-    public Product() {} // BẮT BUỘC cho Firestore
+    // ===== SETTERS =====
+    public void setId(String id) { this.id = id; }
+    public void setVariants(List<Variant> variants) { this.variants = variants; }
 
-    public Product(String id, String name, double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
+    public int getTotalQuantity() {
+        if (variants == null) return 0;
+        int sum = 0;
+        for (Variant v : variants) sum += v.getQuantity();
+        return sum;
     }
 
-    public double getPrice() {
-        return price;
+    public void setReviewStats(double avg, int count) {
+        this.averageRating = avg;
+        this.reviewCount = count;
     }
 }

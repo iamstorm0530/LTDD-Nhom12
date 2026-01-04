@@ -31,6 +31,9 @@ public class HomeActivity extends AppCompatActivity {
     private RecyclerView rvProducts;
     private EditText edtSearch;
     private LinearLayout layoutMale;;
+    private LinearLayout layoutFemale;;
+    private LinearLayout layoutKids;;
+    private LinearLayout layoutUnisex;;
     private ProductAdapter adapter;
     private final List<Product> data = new ArrayList<>();
 
@@ -90,6 +93,28 @@ public class HomeActivity extends AppCompatActivity {
             intent.putExtra("TAG", "male");
             startActivity(intent);
         });
+
+        layoutUnisex  = findViewById(R.id.layoutUnisex);
+        layoutUnisex.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ProductListActivity.class);
+            intent.putExtra("TAG", "unisex");
+            startActivity(intent);
+        });
+
+        layoutFemale = findViewById(R.id.layoutFemale);
+        layoutFemale.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ProductListActivity.class);
+            intent.putExtra("TAG", "female");
+            startActivity(intent);
+        });
+
+        layoutKids = findViewById(R.id.layoutKids);
+        layoutKids.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ProductListActivity.class);
+            intent.putExtra("TAG", "kids");
+            startActivity(intent);
+        });
+
     }
 
     private void bindUserNameOrGuest() {
@@ -122,7 +147,7 @@ public class HomeActivity extends AppCompatActivity {
                     for (DocumentSnapshot doc : qs.getDocuments()) {
                         Product p = doc.toObject(Product.class);
                         if (p != null) {
-                            p.id = doc.getId();
+                            p.setId(doc.getId());
                             data.add(p);
                         }
                     }
@@ -156,12 +181,12 @@ public class HomeActivity extends AppCompatActivity {
             boolean matchName = false;
             boolean matchCategory = false;
 
-            if (p.name != null && p.name.toLowerCase().contains(key)){
+            if (p.getName() != null && p.getName().toLowerCase().contains(key)){
                     matchName = true;
                 }
 
 
-            if (category != null && p.categoryId != null && p.categoryId.equalsIgnoreCase(category)){
+            if (category != null && p.getCategoryId() != null && p.getCategoryId().equalsIgnoreCase(category)){
                 matchCategory = true;
             }
 

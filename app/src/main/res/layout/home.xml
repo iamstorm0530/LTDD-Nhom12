@@ -168,6 +168,7 @@
         android:layout_marginBottom="16dp" >
 
         <LinearLayout
+            android:id="@+id/layoutUnisex"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -186,9 +187,10 @@
                     android:src="@drawable/unisex" />
             </LinearLayout>
             <TextView
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="UNIÉT"
+                android:text="UNISEX"
                 android:textSize="12sp"
                 android:layout_marginTop="6dp"/>
 
@@ -223,6 +225,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutFemale"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -250,6 +253,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layoutKids"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
