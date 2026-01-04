@@ -22,7 +22,7 @@ import java.util.*;
 
 public class AdminProductDetailActivity extends AppCompatActivity {
 
-    private ImageView imgProduct;
+    private ImageView imgProduct, btnBack;
     private TextView tvName, tvPrice, tvRating, tvTag, tvStatus, tvDescription;
     private LinearLayout layoutVariants, layoutReviews;
 
@@ -41,6 +41,11 @@ public class AdminProductDetailActivity extends AppCompatActivity {
 
         bindViews();
         loadProduct();
+
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            finish();
+        });
     }
 
     private void bindViews() {

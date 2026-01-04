@@ -1,10 +1,12 @@
 package com.example.clothshop.activity.admin;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,36 +25,36 @@ import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
 import com.github.mikephil.charting.formatter.ValueFormatter;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-import android.content.Intent;
-import android.widget.ImageView;
-
 
 public class AdminMainActivity extends AppCompatActivity {
 
     // ================= VIEW =================
     private PieChart pieOrderChart;
-    private ImageView navProducts;
-
     private LineChart lineRevenueChart;
     private Spinner spinnerRevenue;
 
     private TextView tvTotalOrders, tvNewOrder, tvShippingOrder,
             tvCompletedOrder, tvCancelledOrder, tvRevenue, tvProductCount;
 
+    private ImageView navProducts, btnBack;
+
+    // ================= FIREBASE =================
+    private FirebaseFirestore db;
+
     // ================= ORDER MOCK =================
     private final int newOrder = 120;
     private final int shipping = 340;
     private final int completed = 700;
     private final int cancelled = 88;
-    private final int productCount = 320;
 
-    // ================= REVENUE MOCK (LONG) =================
+    // ================= REVENUE MOCK =================
     private final long REVENUE_DAY   = 1_789_000L;
     private final long REVENUE_MONTH = 30_500_000L;
     private final long REVENUE_YEAR  = 400_250_000L;
@@ -60,7 +62,7 @@ public class AdminMainActivity extends AppCompatActivity {
     // ================= CUSTOM DATE =================
     private Calendar fromDate, toDate;
 
-    // ================= HOURS (8h–20h) =================
+    // ================= HOURS =================
     private final String[] HOURS = {
             "8h","9h","10h","11h","12h",
             "13h","14h","15h","16h",
@@ -72,15 +74,57 @@ public class AdminMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_main);
 
+        db = FirebaseFirestore.getInstance();
+
         bindViews();
+
         setupOrderText();
         setupOrderPieChart();
         setupSpinnerRevenue();
 
-        setupOtherText(REVENUE_DAY);
         setupRevenueThisDay();
+        setupOtherText(REVENUE_DAY);
 
+        loadProductCount();
+        setupProductClick();
         setupBottomNavigation();
+
+        btnBack = findViewById(R.id.btnBack);
+        btnBack.setOnClickListener(v -> {
+            finish();
+        });
+    }
+
+    // ================= CLICK PRODUCT =================
+    private void setupProductClick() {
+
+        View.OnClickListener goProduct = v -> {
+            Intent intent = new Intent(
+                    AdminMainActivity.this,
+                    AdminProductActivity.class
+            );
+            startActivity(intent);
+        };
+        View productBox = (View) tvProductCount.getParent();
+        if (productBox != null) {
+            productBox.setClickable(true);
+            productBox.setFocusable(true);
+            productBox.setOnClickListener(goProduct);
+        }
+        navProducts.setOnClickListener(goProduct);
+    }
+
+    // ================= LOAD PRODUCT COUNT =================
+    private void loadProductCount() {
+        db.collection("products")
+                .get()
+                .addOnSuccessListener(qs ->
+                        tvProductCount.setText(String.valueOf(qs.size()))
+                )
+                .addOnFailureListener(e -> {
+                    tvProductCount.setText("0");
+                    e.printStackTrace();
+                });
     }
 
     // ================= BIND =================
@@ -96,8 +140,8 @@ public class AdminMainActivity extends AppCompatActivity {
         tvCancelledOrder = findViewById(R.id.tvCancelledOrder);
         tvRevenue = findViewById(R.id.tvRevenue);
         tvProductCount = findViewById(R.id.tvProductCount);
-        navProducts = findViewById(R.id.navProducts);
 
+        navProducts = findViewById(R.id.navProducts);
     }
 
     // ================= SPINNER =================
@@ -127,26 +171,26 @@ public class AdminMainActivity extends AppCompatActivity {
         });
     }
 
-    // ================= THIS DAY =================
+
+    // ================= REVENUE =================
     private void setupRevenueThisDay() {
         List<Entry> entries = new ArrayList<>();
-        int[] hourRevenue = {
-                80_000, 120_000, 150_000, 180_000, 210_000,
-                190_000, 160_000, 170_000, 180_000,
-                160_000, 140_000, 120_000, 129_000
+        int[] data = {
+                80_000,120_000,150_000,180_000,210_000,
+                190_000,160_000,170_000,180_000,
+                160_000,140_000,120_000,129_000
         };
 
         for (int i = 0; i < HOURS.length; i++) {
-            entries.add(new Entry(i, hourRevenue[i]));
+            entries.add(new Entry(i, data[i]));
         }
         drawLineChart(entries, HOURS);
     }
 
-    // ================= THIS MONTH =================
     private void setupRevenueThisMonthByWeek() {
         List<Entry> entries = new ArrayList<>();
         String[] weeks = {"W1","W2","W3","W4"};
-        int[] revenue = {7_200_000, 8_100_000, 8_900_000, 6_300_000};
+        int[] revenue = {7_200_000,8_100_000,8_900_000,6_300_000};
 
         for (int i = 0; i < weeks.length; i++) {
             entries.add(new Entry(i, revenue[i]));
@@ -154,18 +198,15 @@ public class AdminMainActivity extends AppCompatActivity {
         drawLineChart(entries, weeks);
     }
 
-    // ================= THIS YEAR =================
     private void setupRevenueThisYear() {
         List<Entry> entries = new ArrayList<>();
-        String[] months = {
-                "Jan","Feb","Mar","Apr","May","Jun",
-                "Jul","Aug","Sep","Oct","Nov","Dec"
-        };
+        String[] months = {"Jan","Feb","Mar","Apr","May","Jun",
+                "Jul","Aug","Sep","Oct","Nov","Dec"};
 
         int[] revenue = {
-                25_000_000, 28_000_000, 30_000_000, 32_000_000,
-                35_000_000, 34_000_000, 33_000_000, 36_000_000,
-                38_000_000, 40_000_000, 36_000_000, 33_000_000
+                25_000_000,28_000_000,30_000_000,32_000_000,
+                35_000_000,34_000_000,33_000_000,36_000_000,
+                38_000_000,40_000_000,36_000_000,33_000_000
         };
 
         for (int i = 0; i < months.length; i++) {
@@ -173,7 +214,6 @@ public class AdminMainActivity extends AppCompatActivity {
         }
         drawLineChart(entries, months);
     }
-
     // ================= CUSTOM =================
     private void openDateRangePicker() {
         fromDate = Calendar.getInstance();
@@ -212,7 +252,6 @@ public class AdminMainActivity extends AppCompatActivity {
         setupRevenueCustom();
         setupOtherText(18_650_000L);
     }
-
     private void setupRevenueCustom() {
         List<Entry> entries = new ArrayList<>();
         String[] labels = {"W1","W2","W3","W4","W5","W6"};
@@ -224,14 +263,13 @@ public class AdminMainActivity extends AppCompatActivity {
         drawLineChart(entries, labels);
     }
 
-    // ================= DRAW LINE =================
+    // ================= CHART =================
     private void drawLineChart(List<Entry> entries, String[] labels) {
         LineDataSet dataSet = new LineDataSet(entries, "");
         dataSet.setColor(Color.parseColor("#2979FF"));
         dataSet.setLineWidth(2.5f);
         dataSet.setCircleRadius(4f);
         dataSet.setCircleColor(Color.parseColor("#2979FF"));
-        dataSet.setCircleHoleColor(Color.WHITE);
         dataSet.setDrawValues(false);
 
         lineRevenueChart.setData(new LineData(dataSet));
@@ -240,11 +278,6 @@ public class AdminMainActivity extends AppCompatActivity {
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setGranularity(1f);
         xAxis.setLabelCount(labels.length, true);
-        xAxis.setAxisMinimum(0f);
-        xAxis.setAxisMaximum(labels.length - 1);
-        xAxis.setDrawGridLines(false);
-        xAxis.setAvoidFirstLastClipping(true);
-        xAxis.setTextSize(10f);
         xAxis.setValueFormatter(new ValueFormatter() {
             @Override
             public String getFormattedValue(float value) {
@@ -295,7 +328,7 @@ public class AdminMainActivity extends AppCompatActivity {
     // ================= TEXT =================
     private void setupOrderText() {
         int total = newOrder + shipping + completed + cancelled;
-        tvTotalOrders.setText(NumberFormat.getInstance(Locale.US).format(total));
+        tvTotalOrders.setText(NumberFormat.getInstance().format(total));
         tvNewOrder.setText("● New • " + newOrder);
         tvShippingOrder.setText("● Shipping • " + shipping);
         tvCompletedOrder.setText("● Completed • " + completed);
@@ -303,18 +336,7 @@ public class AdminMainActivity extends AppCompatActivity {
     }
 
     private void setupOtherText(long revenue) {
-        tvProductCount.setText(String.valueOf(productCount));
         tvRevenue.setText(formatCurrency(revenue));
-    }
-
-    // ================= FORMAT =================
-    private String formatCurrency(long value) {
-        double million = value / 1_000_000.0;
-
-        if (million == Math.floor(million)) {
-            return String.format(Locale.US, "%.0fM ₫", million);
-        }
-        return String.format(Locale.US, "%.2fM ₫", million);
     }
     private void setupBottomNavigation() {
         navProducts.setOnClickListener(v -> {
@@ -326,4 +348,11 @@ public class AdminMainActivity extends AppCompatActivity {
         });
     }
 
+
+    private String formatCurrency(long value) {
+        double m = value / 1_000_000.0;
+        return (m == Math.floor(m))
+                ? String.format(Locale.US, "%.0fM ₫", m)
+                : String.format(Locale.US, "%.2fM ₫", m);
+    }
 }

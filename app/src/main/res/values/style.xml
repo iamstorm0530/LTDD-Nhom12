@@ -88,4 +88,26 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
+
+    <style name="TagStatusItem">
+        <!-- layout -->
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:paddingHorizontal">14dp</item>
+        <item name="android:layout_height">32dp</item>
+
+        <!-- text -->
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+
+        <!-- color -->
+        <item name="android:textColor">@color/tag_text_status</item>
+
+        <!-- background -->
+        <item name="android:background">@drawable/bg_status</item>
+
+        <!-- interaction -->
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
 </resources>

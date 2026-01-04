@@ -6,7 +6,6 @@
     android:background="#F2F2F7">
 
     <!-- ================= CONTENT ================= -->
-    <!-- ❗ ScrollView KHÔNG dùng paddingBottom nữa -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -2447,6 +2447,7 @@ color switch_thumb_normal_material_light
 color tag_text_green_selector
 color tag_text_red_selector
 color tag_text_selector
+color tag_text_status
 color tag_text_yellow_selector
 color tooltip_background_dark
 color tooltip_background_light
@@ -3571,6 +3572,7 @@ drawable bg_popup_sort
 drawable bg_search
 drawable bg_size_green
 drawable bg_size_red
+drawable bg_status
 drawable bg_tag_green_selector
 drawable bg_tag_red_selector
 drawable bg_tag_selector
@@ -5139,6 +5141,7 @@ style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox
 style TagGreenItem
 style TagItem
 style TagRedItem
+style TagStatusItem
 style TagYellowItem
 style TextAppearance_AppCompat
 style TextAppearance_AppCompat_Body1

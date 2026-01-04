@@ -13,13 +13,23 @@
         android:paddingHorizontal="20dp"
         android:gravity="center_vertical">
 
-        <ImageButton
-            android:id="@+id/btnBack"
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_back"
-            app:tint="#1C1C1E" />
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#E5E5EA"
+            app:cardElevation="0dp"
+            app:cardBackgroundColor="#FFFFFF">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_back"
+                app:tint="#1C1C1E" />
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:id="@+id/tvTitle"
@@ -124,17 +134,24 @@
             android:paddingBottom="4dp">
 
             <TextView
+                android:text="ALL"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagStatusItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
                 android:text="ACTIVE"
                 android:layout_height="32dp"
                 android:layout_width="wrap_content"
-                style="@style/TagItem"
+                style="@style/TagStatusItem"
                 android:layout_marginEnd="10dp"/>
 
             <TextView
                 android:text="HIDDEN"
                 android:layout_height="32dp"
                 android:layout_width="wrap_content"
-                style="@style/TagItem"
+                style="@style/TagStatusItem"
                 android:layout_marginEnd="10dp"/>
 
             <TextView

@@ -2446,6 +2446,7 @@ int color switch_thumb_normal_material_light 0x7f0603b9
 int color tag_text_green_selector 0x7f0603be
 int color tag_text_red_selector 0x7f0603bf
 int color tag_text_selector 0x7f0603ba
+int color tag_text_status 0x7f0603c2
 int color tag_text_yellow_selector 0x7f0603c0
 int color tooltip_background_dark 0x7f0603bb
 int color tooltip_background_light 0x7f0603bc
@@ -3570,6 +3571,7 @@ int drawable bg_popup_sort 0x7f08010e
 int drawable bg_search 0x7f08007d
 int drawable bg_size_green 0x7f08010b
 int drawable bg_size_red 0x7f08010c
+int drawable bg_status 0x7f080113
 int drawable bg_tag_green_selector 0x7f08010f
 int drawable bg_tag_red_selector 0x7f080110
 int drawable bg_tag_selector 0x7f08007e
@@ -5138,6 +5140,7 @@ int style ShapeAppearanceOverlay_MaterialComponents_TextInputLayout_FilledBox 0x
 int style TagGreenItem 0x7f1204d0
 int style TagItem 0x7f1201ba
 int style TagRedItem 0x7f1204d1
+int style TagStatusItem 0x7f1204d4
 int style TagYellowItem 0x7f1204d2
 int style TextAppearance_AppCompat 0x7f1201bb
 int style TextAppearance_AppCompat_Body1 0x7f1201bc

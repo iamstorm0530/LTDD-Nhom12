@@ -19,7 +19,6 @@ import com.example.clothshop.model.SortType;
 import com.example.clothshop.model.Variant;
 import com.example.clothshop.utils.CurrencyUtils;
 
-import java.text.NumberFormat;
 import java.util.*;
 
 public class AdminProductAdapter
@@ -29,29 +28,82 @@ public class AdminProductAdapter
     private final List<Product> displayList = new ArrayList<>();
     private SortType currentSort = SortType.NONE;
 
-    // ✅ THỨ TỰ SIZE CỐ ĐỊNH
+    // ===== SIZE ORDER =====
     private static final List<String> SIZE_ORDER =
             Arrays.asList("S", "M", "L");
+
+    private static final int LOW_STOCK_THRESHOLD = 30;
 
     public AdminProductAdapter(List<Product> productList) {
         this.productList = productList;
         displayList.addAll(productList);
     }
 
-    // ================= FILTER =================
-    public void filter(String keyword, String tag) {
+    // ================= FILTER (🔥 FIX AND LOGIC) =================
+    public void filter(String keyword, String tag, Set<String> statuses) {
         displayList.clear();
 
+        boolean filterActive = statuses.contains("ACTIVE");
+        boolean filterHidden = statuses.contains("HIDDEN");
+
+        boolean filterOut = statuses.contains("OUT_OF_STOCK");
+        boolean filterLow = statuses.contains("LOW_STOCK");
+        boolean filterIn  = statuses.contains("IN_STOCK");
+
         for (Product p : productList) {
-            boolean matchTag = tag.equals("ALL")
-                    || (p.getTag() != null && p.getTag().equalsIgnoreCase(tag));
 
-            boolean matchSearch = p.getName() != null
-                    && p.getName().toLowerCase().contains(keyword.toLowerCase());
-
-            if (matchTag && matchSearch) {
-                displayList.add(p);
+            // ===== SEARCH =====
+            if (keyword != null && !keyword.isEmpty()) {
+                if (p.getName() == null ||
+                        !p.getName().toLowerCase()
+                                .contains(keyword.toLowerCase())) {
+                    continue;
+                }
             }
+
+            // ===== TAG (GENDER) =====
+            if (!"ALL".equalsIgnoreCase(tag)) {
+                if (p.getTag() == null ||
+                        !p.getTag().equalsIgnoreCase(tag)) {
+                    continue;
+                }
+            }
+
+            // ===== STATUS (ACTIVE / HIDDEN) =====
+            if (filterActive || filterHidden) {
+                if (filterActive && filterHidden) {
+                    // both allowed → pass
+                } else if (filterActive) {
+                    if (!"active".equalsIgnoreCase(p.getStatus())) continue;
+                } else {
+                    if (!"hidden".equalsIgnoreCase(p.getStatus())) continue;
+                }
+            }
+
+            // ===== STOCK STATUS (VARIANT-BASED) =====
+            if (filterOut || filterLow || filterIn) {
+
+                boolean hasOut = false;
+                boolean hasLow = false;
+                boolean hasIn  = false;
+
+                if (p.getVariants() != null) {
+                    for (Variant v : p.getVariants()) {
+                        int q = v.getQuantity();
+
+                        if (q == 0) hasOut = true;
+                        else if (q < LOW_STOCK_THRESHOLD) hasLow = true;
+                        else hasIn = true;
+                    }
+                }
+
+                // 🔥 AND tuyệt đối
+                if (filterOut && !hasOut) continue;
+                if (filterLow && !hasLow) continue;
+                if (filterIn  && !hasIn)  continue;
+            }
+
+            displayList.add(p);
         }
 
         applySort();
@@ -80,28 +132,10 @@ public class AdminProductAdapter
                         b.getName().compareToIgnoreCase(a.getName()));
                 break;
 
-            case STATUS_STOCK:
-                displayList.sort((a, b) -> {
-                    if (!a.getStatus().equalsIgnoreCase(b.getStatus())) {
-                        return a.getStatus().equalsIgnoreCase("active") ? -1 : 1;
-                    }
-                    return Integer.compare(
-                            stockRank(a.getTotalQuantity()),
-                            stockRank(b.getTotalQuantity())
-                    );
-                });
-                break;
-
             case NONE:
             default:
                 break;
         }
-    }
-
-    private int stockRank(int qty) {
-        if (qty == 0) return 2;
-        if (qty < 30) return 1;
-        return 0;
     }
 
     public void setSort(SortType sortType) {
@@ -127,7 +161,6 @@ public class AdminProductAdapter
 
         Product p = displayList.get(pos);
 
-        // ===== BASIC INFO =====
         h.tvName.setText(p.getName());
         h.tvPrice.setText(CurrencyUtils.format(p.getPrice()));
         h.tvStock.setText("Stock: " + p.getTotalQuantity());
@@ -135,14 +168,11 @@ public class AdminProductAdapter
                 p.getAverageRating() + " ★ (" + p.getReviewCount() + ")"
         );
 
-        // ===== TAG =====
         if (p.getTag() != null) {
             h.tvTag.setText(p.getTag().toUpperCase());
         }
 
-        // ===== STATUS =====
-        String status = p.getStatus();
-        if (status != null && status.equalsIgnoreCase("hidden")) {
+        if ("hidden".equalsIgnoreCase(p.getStatus())) {
             h.tvStatus.setText("HIDDEN");
             h.tvStatus.setBackgroundResource(R.drawable.bg_chip_red);
             h.tvStatus.setTextColor(Color.RED);
@@ -152,7 +182,6 @@ public class AdminProductAdapter
             h.tvStatus.setTextColor(Color.GREEN);
         }
 
-        // ===== IMAGE =====
         if (p.getImages() != null && !p.getImages().isEmpty()) {
             Glide.with(h.itemView.getContext())
                     .load(p.getImages().get(0))
@@ -160,15 +189,12 @@ public class AdminProductAdapter
                     .into(h.imgProduct);
         }
 
-        // ================= VARIANTS (🔥 FIX NPE + GIỮ COLOR SIZE) =================
         h.layoutVariants.removeAllViews();
 
-        // 🔥 FIX CỐT LÕI: variants KHÔNG BAO GIỜ NULL
         if (p.getVariants() == null) {
             p.setVariants(new ArrayList<>());
         }
 
-        // GROUP VARIANTS THEO COLOR
         Map<String, Map<String, Variant>> colorMap = new LinkedHashMap<>();
 
         for (Variant v : p.getVariants()) {
@@ -180,7 +206,6 @@ public class AdminProductAdapter
                     .put(v.getSize(), v);
         }
 
-        // RENDER TỪNG COLOR + SIZE
         for (String color : colorMap.keySet()) {
             h.layoutVariants.addView(
                     createColorRow(
@@ -202,7 +227,6 @@ public class AdminProductAdapter
         row.setOrientation(LinearLayout.HORIZONTAL);
         row.setPadding(0, 6, 0, 6);
 
-        // COLOR NAME
         TextView tvColor = new TextView(ctx);
         tvColor.setText(color.toUpperCase());
         tvColor.setWidth(dp(ctx, 48));
@@ -213,7 +237,6 @@ public class AdminProductAdapter
         LinearLayout sizeWrap = new LinearLayout(ctx);
         sizeWrap.setOrientation(LinearLayout.HORIZONTAL);
 
-        // ✅ S → M → L
         for (String size : SIZE_ORDER) {
             Variant v = sizeMap.get(size);
             if (v == null) continue;
@@ -228,7 +251,7 @@ public class AdminProductAdapter
             if (qty == 0) {
                 chip.setBackgroundResource(R.drawable.bg_size_red);
                 chip.setTextColor(Color.WHITE);
-            } else if (qty < 30) {
+            } else if (qty < LOW_STOCK_THRESHOLD) {
                 chip.setBackgroundResource(R.drawable.bg_chip_yellow);
                 chip.setTextColor(Color.BLACK);
             } else {
@@ -273,11 +296,9 @@ public class AdminProductAdapter
         }
     }
 
-    // ================= GET ITEM FOR CLICK =================
+    // ================= GET ITEM =================
     public Product getItemAt(int position) {
-        if (position < 0 || position >= displayList.size()) {
-            return null;
-        }
+        if (position < 0 || position >= displayList.size()) return null;
         return displayList.get(position);
     }
 }
