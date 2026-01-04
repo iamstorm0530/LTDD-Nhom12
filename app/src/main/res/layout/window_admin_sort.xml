@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup_sort"
+    android:padding="12dp"
+    android:elevation="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sắp xếp theo"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#1C1C1E"
+        android:paddingBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/sortPriceAsc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Giá tăng dần"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/sortPriceDesc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Giá giảm dần"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/sortNameAsc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Tên A → Z"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/sortNameDesc"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Tên Z → A"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="8dp"
+        android:textSize="13sp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+</LinearLayout>
