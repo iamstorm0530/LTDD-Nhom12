@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- ===== HEADER ===== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#FFFFFF"
+        android:layout_marginBottom="10dp">
+
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="#FFFFFF"
+            android:src="@drawable/ic_back" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="My Wishlist"
+            android:textStyle="bold"
+            android:textSize="30sp"/>
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingBottom="10dp"
+        android:paddingTop="6dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <LinearLayout
+            android:id="@+id/tabContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tabAll"
+                style="@style/TabItem"
+                android:text="All" />
+
+            <TextView
+                android:id="@+id/tabJacket"
+                style="@style/TabItem"
+                android:text="Jacket" />
+
+            <TextView
+                android:id="@+id/tabShirt"
+                style="@style/TabItem"
+                android:text="Shirt" />
+
+            <TextView
+                android:id="@+id/tabPant"
+                style="@style/TabItem"
+                android:text="Pant" />
+
+            <TextView
+                android:id="@+id/tabTshirt"
+                style="@style/TabItem"
+                android:text="T-Shirt" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:nestedScrollingEnabled="false"/>
+
+    <include layout="@layout/home_activity_bottom" />
+
+
+
+</LinearLayout>
