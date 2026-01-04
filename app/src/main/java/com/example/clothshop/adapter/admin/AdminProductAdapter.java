@@ -30,7 +30,7 @@ public class AdminProductAdapter
 
     // ===== SIZE ORDER =====
     private static final List<String> SIZE_ORDER =
-            Arrays.asList("S", "M", "L");
+            Arrays.asList("S", "M", "L", "XL", "XXL"); // Update full size range if needed
 
     private static final int LOW_STOCK_THRESHOLD = 30;
 
@@ -39,7 +39,7 @@ public class AdminProductAdapter
         displayList.addAll(productList);
     }
 
-    // ================= FILTER (🔥 FIX AND LOGIC) =================
+    // ================= FILTER =================
     public void filter(String keyword, String tag, Set<String> statuses) {
         displayList.clear();
 
@@ -61,7 +61,7 @@ public class AdminProductAdapter
                 }
             }
 
-            // ===== TAG (GENDER) =====
+            // ===== TAG =====
             if (!"ALL".equalsIgnoreCase(tag)) {
                 if (p.getTag() == null ||
                         !p.getTag().equalsIgnoreCase(tag)) {
@@ -69,10 +69,10 @@ public class AdminProductAdapter
                 }
             }
 
-            // ===== STATUS (ACTIVE / HIDDEN) =====
+            // ===== STATUS =====
             if (filterActive || filterHidden) {
                 if (filterActive && filterHidden) {
-                    // both allowed → pass
+                    // allow both
                 } else if (filterActive) {
                     if (!"active".equalsIgnoreCase(p.getStatus())) continue;
                 } else {
@@ -80,7 +80,7 @@ public class AdminProductAdapter
                 }
             }
 
-            // ===== STOCK STATUS (VARIANT-BASED) =====
+            // ===== STOCK STATUS =====
             if (filterOut || filterLow || filterIn) {
 
                 boolean hasOut = false;
@@ -90,14 +90,12 @@ public class AdminProductAdapter
                 if (p.getVariants() != null) {
                     for (Variant v : p.getVariants()) {
                         int q = v.getQuantity();
-
                         if (q == 0) hasOut = true;
                         else if (q < LOW_STOCK_THRESHOLD) hasLow = true;
                         else hasIn = true;
                     }
                 }
 
-                // 🔥 AND tuyệt đối
                 if (filterOut && !hasOut) continue;
                 if (filterLow && !hasLow) continue;
                 if (filterIn  && !hasIn)  continue;
@@ -114,12 +112,12 @@ public class AdminProductAdapter
     private void applySort() {
         switch (currentSort) {
             case PRICE_ASC:
-                displayList.sort(Comparator.comparingDouble(Product::getPrice));
+                displayList.sort(Comparator.comparingDouble(Product::getDisplayPrice)); // Sort by display price (sale price)
                 break;
 
             case PRICE_DESC:
                 displayList.sort((a, b) ->
-                        Double.compare(b.getPrice(), a.getPrice()));
+                        Double.compare(b.getDisplayPrice(), a.getDisplayPrice()));
                 break;
 
             case NAME_ASC:
@@ -161,17 +159,59 @@ public class AdminProductAdapter
 
         Product p = displayList.get(pos);
 
+        // ===== NAME =====
         h.tvName.setText(p.getName());
-        h.tvPrice.setText(CurrencyUtils.format(p.getPrice()));
+
+        // ===== PRICE + SALE =====
+        // Logic hiển thị giá đã được sửa trong Model, ở đây chỉ cần gọi getDisplayPrice()
+        if (p.isOnSale()) {
+            // GIÁ SALE
+            h.tvPrice.setText(
+                    CurrencyUtils.format(p.getDisplayPrice())
+            );
+
+            h.layoutSale.setVisibility(View.VISIBLE);
+            h.tvSaleStatus.setText("ON");
+            h.tvSaleStatus.setTextColor(Color.RED);
+
+            Integer percent = p.getSalePercent();
+            if (percent != null) {
+                h.tvSalePercent.setVisibility(View.VISIBLE);
+                h.tvSalePercent.setText("-" + percent + "%");
+            } else {
+                h.tvSalePercent.setVisibility(View.GONE);
+            }
+
+            h.tvSalePrice.setVisibility(View.VISIBLE);
+            h.tvSalePrice.setText(
+                    CurrencyUtils.format(p.getDisplayPrice())
+            );
+
+        } else {
+            // GIÁ GỐC
+            h.tvPrice.setText(
+                    CurrencyUtils.format(p.getPrice())
+            );
+
+            h.layoutSale.setVisibility(View.VISIBLE); // Hoặc GONE tùy design
+            h.tvSaleStatus.setText("OFF");
+            h.tvSaleStatus.setTextColor(Color.GRAY);
+            h.tvSalePercent.setVisibility(View.GONE);
+            h.tvSalePrice.setVisibility(View.GONE);
+        }
+
+        // ===== STOCK / RATING =====
         h.tvStock.setText("Stock: " + p.getTotalQuantity());
         h.tvRating.setText(
                 p.getAverageRating() + " ★ (" + p.getReviewCount() + ")"
         );
 
+        // ===== TAG =====
         if (p.getTag() != null) {
             h.tvTag.setText(p.getTag().toUpperCase());
         }
 
+        // ===== STATUS =====
         if ("hidden".equalsIgnoreCase(p.getStatus())) {
             h.tvStatus.setText("HIDDEN");
             h.tvStatus.setBackgroundResource(R.drawable.bg_chip_red);
@@ -182,13 +222,18 @@ public class AdminProductAdapter
             h.tvStatus.setTextColor(Color.GREEN);
         }
 
+        // ===== IMAGE =====
         if (p.getImages() != null && !p.getImages().isEmpty()) {
             Glide.with(h.itemView.getContext())
                     .load(p.getImages().get(0))
                     .centerCrop()
                     .into(h.imgProduct);
+        } else {
+            // Fallback image if needed
+            h.imgProduct.setImageResource(R.drawable.ic_launcher_background);
         }
 
+        // ===== VARIANTS =====
         h.layoutVariants.removeAllViews();
 
         if (p.getVariants() == null) {
@@ -246,6 +291,14 @@ public class AdminProductAdapter
             chip.setTextSize(11);
             chip.setPadding(12, 6, 12, 6);
 
+            // Margin for chips
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+            );
+            lp.setMargins(4, 0, 4, 0);
+            chip.setLayoutParams(lp);
+
             int qty = v.getQuantity();
 
             if (qty == 0) {
@@ -281,6 +334,11 @@ public class AdminProductAdapter
 
         ImageView imgProduct;
         TextView tvName, tvPrice, tvStock, tvRating, tvTag, tvStatus;
+
+        // 🔥 SALE
+        LinearLayout layoutSale;
+        TextView tvSaleStatus, tvSalePercent, tvSalePrice;
+
         LinearLayout layoutVariants;
 
         ProductViewHolder(@NonNull View v) {
@@ -292,6 +350,13 @@ public class AdminProductAdapter
             tvRating = v.findViewById(R.id.tvRating);
             tvTag = v.findViewById(R.id.tvTag);
             tvStatus = v.findViewById(R.id.tvStatus);
+
+            // SALE
+            layoutSale = v.findViewById(R.id.layoutSale);
+            tvSaleStatus = v.findViewById(R.id.tvSaleStatus);
+            tvSalePercent = v.findViewById(R.id.tvSalePercent);
+            tvSalePrice = v.findViewById(R.id.tvSalePrice);
+
             layoutVariants = v.findViewById(R.id.layoutVariants);
         }
     }

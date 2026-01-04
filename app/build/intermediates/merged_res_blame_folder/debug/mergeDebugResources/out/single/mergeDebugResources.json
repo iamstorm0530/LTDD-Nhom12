@@ -16,10 +16,6 @@
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.clothshop.app-debug-45:/layout_window_admin_sort.xml.flat",
-        "source": "com.example.clothshop.app-main-47:/layout/window_admin_sort.xml"
-    },
-    {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_launcher_foreground.xml"
     },
@@ -68,12 +64,12 @@
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_tag_selector.xml"
     },
     {
-        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\color_tag_text_status.xml.flat",
-        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\color\\tag_text_status.xml"
-    },
-    {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_products.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_products.xml"
+    },
+    {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\color_tag_text_status.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\color\\tag_text_status.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\layout_activity_admin_product_detail.xml.flat",
@@ -170,6 +166,10 @@
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_chip_yellow.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_chip_yellow.xml"
+    },
+    {
+        "merged": "com.example.clothshop.app-debug-45:/layout_item_admin_product.xml.flat",
+        "source": "com.example.clothshop.app-main-47:/layout/item_admin_product.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_tag_unselected.xml.flat",

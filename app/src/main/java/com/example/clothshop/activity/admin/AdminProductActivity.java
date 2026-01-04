@@ -2,21 +2,33 @@ package com.example.clothshop.activity.admin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.*;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.*;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.*;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clothshop.R;
 import com.example.clothshop.adapter.admin.AdminProductAdapter;
-import com.example.clothshop.model.*;
-import com.google.firebase.firestore.*;
+import com.example.clothshop.model.Product;
+import com.example.clothshop.model.SortType;
+import com.example.clothshop.model.Variant;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.ListenerRegistration;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 public class AdminProductActivity extends AppCompatActivity {
 
@@ -66,6 +78,7 @@ public class AdminProductActivity extends AppCompatActivity {
     private void listenProducts() {
         listener = db.collection("products")
                 .addSnapshotListener((qs, e) -> {
+                    if (e != null) return;
                     if (qs == null) return;
 
                     productList.clear();
@@ -74,7 +87,7 @@ public class AdminProductActivity extends AppCompatActivity {
                         Product p = d.toObject(Product.class);
                         if (p == null) continue;
 
-                        // ❗ dùng @DocumentId
+                        // ❗ dùng @DocumentId tự động gán ID
                         p.setVariants(new ArrayList<>());
                         productList.add(p);
 
@@ -97,6 +110,7 @@ public class AdminProductActivity extends AppCompatActivity {
                         if (v != null) variants.add(v);
                     }
                     p.setVariants(variants);
+                    // Thông báo cập nhật item cụ thể hoặc toàn bộ
                     adapter.notifyDataSetChanged();
                 });
     }

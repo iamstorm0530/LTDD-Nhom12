@@ -35,6 +35,7 @@ id btnSort
 id edtSearch
 id imgProduct
 id layoutReviews
+id layoutSale
 id layoutStatusFilter
 id layoutTags
 id layoutVariants
@@ -53,7 +54,6 @@ id sortPriceAsc
 id sortPriceDesc
 id spinnerRevenue
 id tvCancelledOrder
-id tvColor
 id tvCompletedOrder
 id tvDescription
 id tvName
@@ -62,10 +62,11 @@ id tvPrice
 id tvProductCount
 id tvRating
 id tvRevenue
+id tvSaleLabel
+id tvSalePercent
+id tvSalePrice
+id tvSaleStatus
 id tvShippingOrder
-id tvSizeL
-id tvSizeM
-id tvSizeS
 id tvStatus
 id tvStock
 id tvTag

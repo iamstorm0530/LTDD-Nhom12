@@ -3969,6 +3969,7 @@ int id jumpToStart 0x7f0900f8
 int id labeled 0x7f0900f9
 int id layout 0x7f0900fa
 int id layoutReviews 0x7f090233
+int id layoutSale 0x7f09023b
 int id layoutStatusFilter 0x7f090236
 int id layoutTags 0x7f0900fb
 int id layoutVariants 0x7f09022e
@@ -4242,7 +4243,6 @@ int id transition_scene_layoutid_cache 0x7f090202
 int id transition_transform 0x7f090203
 int id triangle 0x7f090204
 int id tvCancelledOrder 0x7f090205
-int id tvColor 0x7f09022f
 int id tvCompletedOrder 0x7f090206
 int id tvDescription 0x7f090234
 int id tvName 0x7f090207
@@ -4251,10 +4251,11 @@ int id tvPrice 0x7f090209
 int id tvProductCount 0x7f09020a
 int id tvRating 0x7f09020b
 int id tvRevenue 0x7f09020c
+int id tvSaleLabel 0x7f09023c
+int id tvSalePercent 0x7f09023d
+int id tvSalePrice 0x7f09023e
+int id tvSaleStatus 0x7f09023f
 int id tvShippingOrder 0x7f09020d
-int id tvSizeL 0x7f090230
-int id tvSizeM 0x7f090231
-int id tvSizeS 0x7f090232
 int id tvStatus 0x7f09020e
 int id tvStock 0x7f09020f
 int id tvTag 0x7f090210

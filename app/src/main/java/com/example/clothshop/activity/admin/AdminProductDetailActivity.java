@@ -2,6 +2,7 @@ package com.example.clothshop.activity.admin;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -17,19 +18,21 @@ import com.example.clothshop.utils.CurrencyUtils;
 import com.example.clothshop.utils.VariantUIFactory;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.NumberFormat;
 import java.util.*;
 
 public class AdminProductDetailActivity extends AppCompatActivity {
 
     private ImageView imgProduct, btnBack;
     private TextView tvName, tvPrice, tvRating, tvTag, tvStatus, tvDescription;
+
+    // 🔥 SALE (THÊM)
+    private LinearLayout layoutSale;
+    private TextView tvSaleStatus, tvSalePercent, tvSalePrice;
+
     private LinearLayout layoutVariants, layoutReviews;
 
     private FirebaseFirestore db;
     private String productId;
-
-    private static final List<String> SIZE_ORDER = Arrays.asList("S", "M", "L");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,25 +45,33 @@ public class AdminProductDetailActivity extends AppCompatActivity {
         bindViews();
         loadProduct();
 
-        btnBack = findViewById(R.id.btnBack);
-        btnBack.setOnClickListener(v -> {
-            finish();
-        });
+        btnBack.setOnClickListener(v -> finish());
     }
 
     private void bindViews() {
         imgProduct = findViewById(R.id.imgProduct);
+        btnBack = findViewById(R.id.btnBack);
+
         tvName = findViewById(R.id.tvName);
         tvPrice = findViewById(R.id.tvPrice);
         tvRating = findViewById(R.id.tvRating);
         tvTag = findViewById(R.id.tvTag);
         tvStatus = findViewById(R.id.tvStatus);
         tvDescription = findViewById(R.id.tvDescription);
+
+        // SALE
+        layoutSale = findViewById(R.id.layoutSale);
+        tvSaleStatus = findViewById(R.id.tvSaleStatus);
+        tvSalePercent = findViewById(R.id.tvSalePercent);
+        tvSalePrice = findViewById(R.id.tvSalePrice);
+
         layoutVariants = findViewById(R.id.layoutVariants);
         layoutReviews = findViewById(R.id.layoutReviews);
     }
 
     private void loadProduct() {
+        if (productId == null) return;
+
         db.collection("products").document(productId)
                 .get()
                 .addOnSuccessListener(doc -> {
@@ -68,10 +79,50 @@ public class AdminProductDetailActivity extends AppCompatActivity {
                     if (p == null) return;
 
                     tvName.setText(p.getName());
-                    tvPrice.setText(CurrencyUtils.format(p.getPrice()));
-                    tvRating.setText(p.getAverageRating() + " ★ (" + p.getReviewCount() + ")");
-                    tvTag.setText(p.getTag().toUpperCase());
-                    tvDescription.setText(p.getDescription());
+
+                    // ================= SALE LOGIC =================
+                    // Nhờ Setter bên Product đã sửa, dữ liệu ở đây sẽ chính xác
+                    if (p.isOnSale()) {
+                        // Hiển thị giá đã giảm ở Main Price hoặc giá gốc tùy design,
+                        // ở đây set SalePrice vào field Price chính
+                        tvPrice.setText(CurrencyUtils.format(p.getSalePrice()));
+
+                        layoutSale.setVisibility(View.VISIBLE);
+                        tvSaleStatus.setText("ON");
+
+                        if (p.getSalePercent() != null) {
+                            tvSalePercent.setVisibility(View.VISIBLE);
+                            tvSalePercent.setText("-" + p.getSalePercent() + "%");
+                        } else {
+                            tvSalePercent.setVisibility(View.GONE);
+                        }
+
+                        tvSalePrice.setVisibility(View.VISIBLE);
+                        tvSalePrice.setText(
+                                CurrencyUtils.format(p.getSalePrice())
+                        );
+
+                    } else {
+                        tvPrice.setText(CurrencyUtils.format(p.getPrice()));
+
+                        layoutSale.setVisibility(View.VISIBLE);
+                        tvSaleStatus.setText("OFF");
+                        tvSalePercent.setVisibility(View.GONE);
+                        tvSalePrice.setVisibility(View.GONE);
+                    }
+                    // =======================================================
+
+                    tvRating.setText(
+                            p.getAverageRating() + " ★ (" + p.getReviewCount() + ")"
+                    );
+
+                    if (p.getTag() != null) {
+                        tvTag.setText(p.getTag().toUpperCase());
+                    }
+
+                    if (p.getDescription() != null) {
+                        tvDescription.setText(p.getDescription());
+                    }
 
                     if ("hidden".equalsIgnoreCase(p.getStatus())) {
                         tvStatus.setText("HIDDEN");
@@ -83,7 +134,7 @@ public class AdminProductDetailActivity extends AppCompatActivity {
                         tvStatus.setTextColor(Color.GREEN);
                     }
 
-                    if (!p.getImages().isEmpty()) {
+                    if (p.getImages() != null && !p.getImages().isEmpty()) {
                         Glide.with(this)
                                 .load(p.getImages().get(0))
                                 .into(imgProduct);

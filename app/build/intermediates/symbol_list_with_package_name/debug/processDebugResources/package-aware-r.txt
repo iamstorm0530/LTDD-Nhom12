@@ -3970,6 +3970,7 @@ id jumpToStart
 id labeled
 id layout
 id layoutReviews
+id layoutSale
 id layoutStatusFilter
 id layoutTags
 id layoutVariants
@@ -4243,7 +4244,6 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvCancelledOrder
-id tvColor
 id tvCompletedOrder
 id tvDescription
 id tvName
@@ -4252,10 +4252,11 @@ id tvPrice
 id tvProductCount
 id tvRating
 id tvRevenue
+id tvSaleLabel
+id tvSalePercent
+id tvSalePrice
+id tvSaleStatus
 id tvShippingOrder
-id tvSizeL
-id tvSizeM
-id tvSizeS
 id tvStatus
 id tvStock
 id tvTag
