@@ -58,6 +58,7 @@ public class AdminProductActivity extends AppCompatActivity {
         setupTagFilter();          // 🔥 TAG 1
         setupStatusFilter();       // 🔥 TAG 2
         setupSort();
+        setupItemClick();
     }
 
     // ================= LOAD =================
@@ -70,13 +71,11 @@ public class AdminProductActivity extends AppCompatActivity {
 
                     for (var d : qs.getDocuments()) {
                         Product p = d.toObject(Product.class);
-                        if (p == null) continue;
+                        if (p == null) return;
 
-                        p.setId(d.getId());
-                        p.setVariants(new ArrayList<>()); // 🔥 QUAN TRỌNG
+                        p.setVariants(new ArrayList<>());
                         productList.add(p);
-
-                        loadVariants(p); // 🔥 LOAD VARIANTS
+                        loadVariants(p);
                     }
 
                     adapter.filter(keyword, currentTag);
