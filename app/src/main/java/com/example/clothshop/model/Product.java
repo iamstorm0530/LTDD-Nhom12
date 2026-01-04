@@ -2,25 +2,20 @@ package com.example.clothshop.model;
 
 import com.google.firebase.firestore.DocumentId;
 import com.google.firebase.firestore.Exclude;
-import com.google.firebase.firestore.PropertyName; // 🔥 Cần import cái này
+import com.google.firebase.firestore.PropertyName;
 
 import java.util.List;
 
 public class Product {
-
     @DocumentId
     private String id;
-
     private String name;
     private double price;
-
-    // ===== SALE =====
-    // 🔥 FIX: Thêm PropertyName để map chính xác với field "isOnSale" trong DB
     @PropertyName("isOnSale")
     private boolean isOnSale;
 
-    private Double salePrice;      // chỉ đọc khi isOnSale = true
-    private Integer salePercent;   // chỉ đọc khi isOnSale = true
+    private Double salePrice;
+    private Integer salePercent;
 
     private String categoryId;
     private String tag;
@@ -33,45 +28,21 @@ public class Product {
 
     @Exclude
     private List<Variant> variants;
-
-    // ================= CONSTRUCTOR =================
     public Product() {}
-
-    // ================= BASIC GETTERS =================
     public String getId() { return id; }
     public String getName() { return name; }
     public double getPrice() { return price; }
-
-    // ================= SALE CORE (ĐÃ SỬA) =================
-
-    /**
-     * 🔥 FIX: Thêm PropertyName cho Getter để đảm bảo Firebase đọc đúng
-     */
     @PropertyName("isOnSale")
     public boolean isOnSale() {
         return isOnSale;
     }
-
-    /**
-     * 🔥 FIX: Thêm Setter cho isOnSale (+PropertyName)
-     * Firebase BẮT BUỘC cần hàm này để ghi dữ liệu true/false vào biến
-     */
     @PropertyName("isOnSale")
     public void setOnSale(boolean onSale) {
         this.isOnSale = onSale;
     }
-
-    /**
-     * 🔥 FIX: Thêm Setter cho salePrice
-     * Firebase BẮT BUỘC cần hàm này để ghi dữ liệu giá sale vào biến
-     */
     public void setSalePrice(Double salePrice) {
         this.salePrice = salePrice;
     }
-
-    /**
-     * 🔥 FIX: Thêm Setter cho salePercent
-     */
     public void setSalePercent(Integer salePercent) {
         this.salePercent = salePercent;
     }
@@ -79,24 +50,14 @@ public class Product {
     public Double getSalePrice() {
         return isOnSale ? salePrice : null;
     }
-
-    /**
-     * Giá dùng cho hiển thị
-     * isOnSale = false → giá gốc
-     */
-    @Exclude // Hàm logic, không map database
+    @Exclude
     public double getDisplayPrice() {
         if (isOnSale && salePrice != null && salePrice > 0) {
             return salePrice;
         }
         return price;
     }
-
-    /**
-     * Percent hiển thị
-     * isOnSale = false → NULL
-     */
-    @Exclude // Hàm logic, không map database
+    @Exclude
     public Integer getSalePercent() {
         if (!isOnSale) return null;
 

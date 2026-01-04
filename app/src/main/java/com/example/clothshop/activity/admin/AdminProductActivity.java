@@ -46,8 +46,6 @@ public class AdminProductActivity extends AppCompatActivity {
 
     private String keyword = "";
     private String currentTag = "ALL";
-
-    // 🔥 MULTI STATUS
     private final Set<String> selectedStatuses = new HashSet<>();
 
     @Override
@@ -87,7 +85,7 @@ public class AdminProductActivity extends AppCompatActivity {
                         Product p = d.toObject(Product.class);
                         if (p == null) continue;
 
-                        // ❗ dùng @DocumentId tự động gán ID
+                        // dùng @DocumentId tự động gán ID
                         p.setVariants(new ArrayList<>());
                         productList.add(p);
 
@@ -188,20 +186,27 @@ public class AdminProductActivity extends AppCompatActivity {
         }
     }
 
-    // ================= 🔥 STATUS LOGIC CORE =================
+    // ================= STATUS LOGIC CORE  =================
     private Set<String> buildEffectiveStatuses() {
         Set<String> result = new HashSet<>(selectedStatuses);
 
         boolean hasActive = result.contains("ACTIVE");
         boolean hasHidden = result.contains("HIDDEN");
 
+        // Nhóm Stock
         boolean hasStock =
                 result.contains("OUT_OF_STOCK") ||
                         result.contains("LOW_STOCK") ||
                         result.contains("IN_STOCK");
 
-        // 👉 chỉ chọn stock status → mặc định ALL status
-        if (hasStock && !hasActive && !hasHidden) {
+        // Nhóm Sale
+        boolean hasSale =
+                result.contains("ON_SALE") ||
+                        result.contains("NO_SALE");
+
+        //  Nếu chọn Stock hoặc Sale mà KHÔNG chọn Status (Active/Hidden)
+        // -> Mặc định là cho phép cả Active và Hidden để không bị trống list
+        if ((hasStock || hasSale) && !hasActive && !hasHidden) {
             result.add("ACTIVE");
             result.add("HIDDEN");
         }

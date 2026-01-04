@@ -8,6 +8,10 @@
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_back.xml"
     },
     {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_solid_red.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_solid_red.xml"
+    },
+    {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -30,6 +34,10 @@
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\color_tag_text_red_selector.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\color\\tag_text_red_selector.xml"
+    },
+    {
+        "merged": "com.example.clothshop.app-debug-45:/layout_activity_admin_product.xml.flat",
+        "source": "com.example.clothshop.app-main-47:/layout/activity_admin_product.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\layout_activity_main.xml.flat",
@@ -64,12 +72,12 @@
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_tag_selector.xml"
     },
     {
-        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_products.xml.flat",
-        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_products.xml"
-    },
-    {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\color_tag_text_status.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\color\\tag_text_status.xml"
+    },
+    {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_products.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_products.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\layout_activity_admin_product_detail.xml.flat",
@@ -88,6 +96,10 @@
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_selector_dot_indication.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\selector_dot_indication.xml"
+    },
+    {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_dashboard.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_dashboard.xml"
     },
@@ -102,6 +114,14 @@
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_ic_filter.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\ic_filter.xml"
+    },
+    {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_selector_dot_indicator.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\selector_dot_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_chip_gray.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_chip_gray.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\color_tag_text_yellow_selector.xml.flat",
@@ -130,6 +150,10 @@
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_tag_yellow_selector.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_tag_yellow_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_border_red.xml.flat",
+        "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_border_red.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
@@ -166,10 +190,6 @@
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_chip_yellow.xml.flat",
         "source": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-main-47:\\drawable\\bg_chip_yellow.xml"
-    },
-    {
-        "merged": "com.example.clothshop.app-debug-45:/layout_item_admin_product.xml.flat",
-        "source": "com.example.clothshop.app-main-47:/layout/item_admin_product.xml"
     },
     {
         "merged": "C:\\Users\\LEGION\\.gradle\\daemon\\8.13\\com.example.clothshop.app-debug-45:\\drawable_bg_tag_unselected.xml.flat",

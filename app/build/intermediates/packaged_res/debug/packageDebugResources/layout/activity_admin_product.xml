@@ -6,7 +6,6 @@
     android:orientation="vertical"
     android:background="#F2F2F7">
 
-    <!-- ================= HEADER ================= -->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="56dp"
@@ -42,7 +41,6 @@
             android:fontFamily="sans-serif-medium"/>
     </RelativeLayout>
 
-    <!-- ================= SEARCH ================= -->
     <EditText
         android:id="@+id/edtSearch"
         android:layout_width="match_parent"
@@ -55,7 +53,6 @@
         android:inputType="text"
         android:textSize="14sp"/>
 
-    <!-- ================= TAG FILTER ================= -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -115,7 +112,6 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- ================= STATUS FILTER (HORIZONTAL SCROLL) ================= -->
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -155,6 +151,19 @@
                 android:layout_marginEnd="10dp"/>
 
             <TextView
+                android:text="ON_SALE"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagStatusItem"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:text="NO_SALE"
+                android:layout_height="32dp"
+                android:layout_width="wrap_content"
+                style="@style/TagStatusItem"
+                android:layout_marginEnd="10dp"/>
+            <TextView
                 android:text="OUT_OF_STOCK"
                 android:layout_height="32dp"
                 android:layout_width="wrap_content"
@@ -178,7 +187,6 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!-- ================= LIST ================= -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProducts"
         android:layout_width="match_parent"
@@ -187,7 +195,6 @@
         android:padding="16dp"
         android:clipToPadding="false"/>
 
-    <!-- ================= BOTTOM NAV ================= -->
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="56dp"

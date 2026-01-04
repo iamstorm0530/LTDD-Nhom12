@@ -8,7 +8,9 @@ color tag_text_selector
 color tag_text_status
 color tag_text_yellow_selector
 color white
+drawable bg_border_red
 drawable bg_chip_blue
+drawable bg_chip_gray
 drawable bg_chip_green
 drawable bg_chip_red
 drawable bg_chip_yellow
@@ -16,6 +18,7 @@ drawable bg_popup_sort
 drawable bg_search
 drawable bg_size_green
 drawable bg_size_red
+drawable bg_solid_red
 drawable bg_status
 drawable bg_tag_green_selector
 drawable bg_tag_red_selector
@@ -30,6 +33,7 @@ drawable ic_orders
 drawable ic_products
 drawable ic_settings
 drawable ic_users
+drawable selector_dot_indicator
 id btnBack
 id btnSort
 id edtSearch
@@ -53,6 +57,7 @@ id sortNameDesc
 id sortPriceAsc
 id sortPriceDesc
 id spinnerRevenue
+id tabLayoutIndicator
 id tvCancelledOrder
 id tvCompletedOrder
 id tvDescription
@@ -62,7 +67,6 @@ id tvPrice
 id tvProductCount
 id tvRating
 id tvRevenue
-id tvSaleLabel
 id tvSalePercent
 id tvSalePrice
 id tvSaleStatus
@@ -72,6 +76,7 @@ id tvStock
 id tvTag
 id tvTitle
 id tvTotalOrders
+id viewPagerImages
 layout activity_admin_main
 layout activity_admin_product
 layout activity_admin_product_detail

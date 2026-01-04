@@ -3564,7 +3564,9 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable bg_border_red
 drawable bg_chip_blue
+drawable bg_chip_gray
 drawable bg_chip_green
 drawable bg_chip_red
 drawable bg_chip_yellow
@@ -3572,6 +3574,7 @@ drawable bg_popup_sort
 drawable bg_search
 drawable bg_size_green
 drawable bg_size_red
+drawable bg_solid_red
 drawable bg_status
 drawable bg_tag_green_selector
 drawable bg_tag_red_selector
@@ -3714,6 +3717,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable selector_dot_indicator
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -4191,6 +4195,7 @@ id stretch
 id submenuarrow
 id submit_area
 id supportScrollUp
+id tabLayoutIndicator
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -4252,7 +4257,6 @@ id tvPrice
 id tvProductCount
 id tvRating
 id tvRevenue
-id tvSaleLabel
 id tvSalePercent
 id tvSalePrice
 id tvSaleStatus
@@ -4269,6 +4273,7 @@ id up
 id useLogo
 id vertical
 id vertical_only
+id viewPagerImages
 id view_offset_helper
 id view_transition
 id view_tree_disjoint_parent
