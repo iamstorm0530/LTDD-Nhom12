@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- DOT INACTIVE -->
+    <style name="DotInactive">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">8dp</item>
+        <item name="android:background">@drawable/dot_inactive</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+
+    <!-- DOT ACTIVE -->
+    <style name="DotActive">
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">10dp</item>
+        <item name="android:background">@drawable/dot_active</item>
+        <item name="android:layout_margin">6dp</item>
+    </style>
+
+    <!-- ✅ STYLE "ĐỆM" để khỏi lỗi nếu nơi nào đó gọi @style/ShapeAppearanceOverlay -->
+    <style name="ShapeAppearanceOverlay">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">999dp</item>
+    </style>
+
+    <!-- ✅ STYLE CHO INTRO PILL -->
+    <style name="ShapeAppearanceOverlay.IntroPill">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">999dp</item>
+    </style>
+
+
+    <style name="TabItem">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/tab_unselected</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+    </style>
+
+</resources>

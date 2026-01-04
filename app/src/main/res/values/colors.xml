@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FFA726</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="segment_outline">#D0D0D0</color>
+
+</resources>
