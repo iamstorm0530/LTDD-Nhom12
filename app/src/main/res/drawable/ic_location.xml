@@ -1,0 +1,47 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="960"
+    android:viewportHeight="960"
+    android:tint="#000000">
+
+    <!-- Vòng tròn rỗng ở giữa -->
+    <path
+        android:fillColor="@android:color/white"
+        android:fillType="evenOdd"
+        android:pathData="
+            M480,320
+            a90,90 0 1,0 0,180
+            a90,90 0 1,0 0,-180
+
+            M480,365
+            a45,45 0 1,1 0,90
+            a45,45 0 1,1 0,-90
+        "/>
+
+    <!-- Pin / marker -->
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="
+            M480,774
+            Q602,662 661,570.5
+            Q720,479 720,408
+            Q720,299 650.5,229.5
+            Q581,160 480,160
+            Q379,160 309.5,229.5
+            Q240,299 240,408
+            Q240,479 299,570.5
+            Q358,662 480,774Z
+
+            M480,880
+            Q319,743 239.5,625.5
+            Q160,508 160,408
+            Q160,258 256.5,169
+            Q353,80 480,80
+            Q607,80 703.5,169
+            Q800,258 800,408
+            Q800,508 720.5,625.5
+            Q641,743 480,880Z
+        "/>
+
+</vector>

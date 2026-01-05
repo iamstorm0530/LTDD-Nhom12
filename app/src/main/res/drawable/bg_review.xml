@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Nền -->
+    <solid android:color="#FAFAFA"/>
+
+    <!-- Bo góc -->
+    <corners android:radius="8dp"/>
+
+    <!-- Viền nét đứt -->
+    <stroke
+        android:width="2dp"
+        android:color="#999999"
+        android:dashWidth="6dp"
+        android:dashGap="5dp"/>
+</shape>
