@@ -85,8 +85,35 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
         h.txtName.setText(p.getName());
 
         NumberFormat formatter = NumberFormat.getInstance(new Locale("vi", "VN"));
-        long priceVND = (long) p.getPrice(); // bạn đang lưu giá kiểu double; tự thống nhất đơn vị
-        h.txtPrice.setText(formatter.format(priceVND) + "đ");
+
+        if (p.isOnSale() && p.getSalePrice() != null) {
+            // 👉 Có giảm giá
+            h.txtSalePrice.setVisibility(View.VISIBLE);
+            h.txtSalePercent.setVisibility(View.VISIBLE);
+
+            h.txtSalePrice.setText(formatter.format(p.getSalePrice()) + "đ");
+
+            h.txtPrice.setText(formatter.format(p.getPrice()) + "đ");
+            h.txtPrice.setPaintFlags(
+                    h.txtPrice.getPaintFlags() | android.graphics.Paint.STRIKE_THRU_TEXT_FLAG
+            );
+
+            Integer percent = p.getSalePercent();
+            if (percent != null) {
+                h.txtSalePercent.setText("-" + percent + "%");
+            } else {
+                h.txtSalePercent.setVisibility(View.GONE);
+            }
+
+        } else {
+            // 👉 Không giảm giá
+            h.txtSalePrice.setVisibility(View.GONE);
+            h.txtSalePercent.setVisibility(View.GONE);
+
+            h.txtPrice.setPaintFlags(0);
+            h.txtPrice.setText(formatter.format(p.getPrice()) + "đ");
+        }
+
 
         h.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(v.getContext(), ProductDetailActivity.class);
@@ -114,13 +141,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.VH> {
 
     static class VH extends RecyclerView.ViewHolder {
         ImageView imgProduct;
-        TextView txtName, txtPrice;
+        TextView txtName, txtPrice, txtSalePrice, txtSalePercent;
 
         VH(@NonNull View itemView) {
             super(itemView);
             imgProduct = itemView.findViewById(R.id.imgProduct);
             txtName = itemView.findViewById(R.id.txtName);
             txtPrice = itemView.findViewById(R.id.txtPrice);
+            txtSalePrice = itemView.findViewById(R.id.txtSalePrice);
+            txtSalePercent = itemView.findViewById(R.id.txtSalePercent);
         }
     }
 }

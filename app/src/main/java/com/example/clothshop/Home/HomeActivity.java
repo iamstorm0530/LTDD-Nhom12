@@ -115,6 +115,14 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        // xư lí BuyNow
+        TextView tvBuyNow = findViewById(R.id.tvBuyNow);
+        tvBuyNow.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, ProductListActivity.class);
+            intent.putExtra("SHOW_SALE_ONLY",true);
+            startActivity(intent);
+        });
+
     }
 
     private void bindUserNameOrGuest() {
@@ -147,7 +155,7 @@ public class HomeActivity extends AppCompatActivity {
                     for (DocumentSnapshot doc : qs.getDocuments()) {
                         Product p = doc.toObject(Product.class);
                         if (p != null) {
-                            p.setId(doc.getId());
+                           // p.setId(doc.getId());
                             data.add(p);
                         }
                     }

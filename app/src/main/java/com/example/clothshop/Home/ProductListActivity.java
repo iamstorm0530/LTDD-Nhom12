@@ -27,11 +27,13 @@ public class ProductListActivity extends AppCompatActivity {
     private TextView[] tabs;
 
     private final List<Product> data = new ArrayList<>();
+    private  boolean showSaleOnly = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_activity_product_list);
+        showSaleOnly = getIntent().getBooleanExtra("SHOW_SALE_ONLY", false);
 
         // ===== RecyclerView =====
         listProducts = findViewById(R.id.listProducts);
@@ -74,28 +76,45 @@ public class ProductListActivity extends AppCompatActivity {
 
     // ===== LOAD ALL =====
     private void loadAllProducts() {
-        FirebaseFirestore.getInstance()
-                .collection("products")
-                .whereEqualTo("status", "active")
-                .get()
-                .addOnSuccessListener(qs -> {
-                    data.clear();
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-                    for (DocumentSnapshot doc : qs.getDocuments()) {
-                        Product p = doc.toObject(Product.class);
-                        if (p != null) {
-                            p.setId(doc.getId()); // ✅ FIX private
-                            data.add(p);
+        if (showSaleOnly) {
+            // 🔥 LOAD CHỈ SẢN PHẨM GIẢM GIÁ
+            db.collection("products")
+                    .whereEqualTo("status", "active")
+                    .whereEqualTo("isOnSale", true)
+                    .get()
+                    .addOnSuccessListener(qs -> {
+                        data.clear();
+                        for (DocumentSnapshot doc : qs) {
+                            Product p = doc.toObject(Product.class);
+                            if (p != null) {
+                                data.add(p);
+                            }
                         }
-                    }
+                        adapter.setOriginalList(data);
+                        selectTab(tabAll);
+                    });
 
-                    adapter.setOriginalList(data);
-                    selectTab(tabAll);
-                })
-                .addOnFailureListener(e ->
-                        Toast.makeText(this, "Load product failed", Toast.LENGTH_SHORT).show()
-                );
+        } else {
+            // 🔥 LOAD TẤT CẢ
+            db.collection("products")
+                    .whereEqualTo("status", "active")
+                    .get()
+                    .addOnSuccessListener(qs -> {
+                        data.clear();
+                        for (DocumentSnapshot doc : qs) {
+                            Product p = doc.toObject(Product.class);
+                            if (p != null) {
+                                data.add(p);
+                            }
+                        }
+                        adapter.setOriginalList(data);
+                        selectTab(tabAll);
+                    });
+        }
     }
+
 
     // ===== LOAD BY TAG (MALE / FEMALE ...) =====
     private void loadProductByTag(String tag) {
@@ -110,7 +129,6 @@ public class ProductListActivity extends AppCompatActivity {
                     for (DocumentSnapshot doc : qs.getDocuments()) {
                         Product p = doc.toObject(Product.class);
                         if (p != null) {
-                            p.setId(doc.getId()); // ✅ FIX private
                             data.add(p);
                         }
                     }
