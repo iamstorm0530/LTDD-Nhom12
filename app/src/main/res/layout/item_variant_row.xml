@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="4dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvVariantColor"
+        android:layout_width="0dp"
+        android:layout_weight="1.5"
+        android:layout_height="wrap_content"
+        android:text="Color: BLACK"
+        android:textColor="#1C1C1E"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvVariantSize"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Size: L"
+        android:textColor="#424242"/>
+
+    <TextView
+        android:id="@+id/tvVariantQty"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Qty: 20"
+        android:textColor="#4CAF50"
+        android:textStyle="bold"
+        android:gravity="end"/>
+
+</LinearLayout>

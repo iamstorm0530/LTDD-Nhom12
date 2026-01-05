@@ -1,0 +1,3 @@
+com.example.clothshop.test
+style WhiteBackgroundDialogTheme
+style WhiteBackgroundTheme

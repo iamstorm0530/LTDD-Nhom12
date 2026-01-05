@@ -1,0 +1,7 @@
+com.example.clothshop.test.app-core-1.7.0-0 C:\Users\LEGION\.gradle\caches\8.13\transforms\c988f512b9325a1447e1f6300f2d8d54\transformed\core-1.7.0\res
+com.example.clothshop.test.app-tracing-1.2.0-1 C:\Users\LEGION\.gradle\caches\8.13\transforms\e12c5fb218fbfc47d0058d899ae27097\transformed\tracing-1.2.0\res
+com.example.clothshop.test.app-androidTest-2 E:\Storm\LTDD\ClothShop\app\build\generated\res\resValues\androidTest\debug
+com.example.clothshop.test.app-updated_navigation_xml-3 E:\Storm\LTDD\ClothShop\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.example.clothshop.test.app-mergeDebugAndroidTestResources-4 E:\Storm\LTDD\ClothShop\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.clothshop.test.app-mergeDebugAndroidTestResources-5 E:\Storm\LTDD\ClothShop\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.clothshop.test.app-debugAndroidTest-6 E:\Storm\LTDD\ClothShop\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
