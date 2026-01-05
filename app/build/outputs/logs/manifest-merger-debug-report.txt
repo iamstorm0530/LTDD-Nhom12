@@ -1,70 +1,73 @@
 -- Merging decision tree log ---
 manifest
-ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-27:12
-INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-27:12
-MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8bc5880ef97d60be5c6368d24477ce3\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\53aad099c6ed581afcd75b86e2a8000c\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6a646e5ba78e223ebbe5a367a11c16c5\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\668c043275edafc6098b81d6810a264c\transformed\appcompat-1.7.1\AndroidManifest.xml:2:1-7:12
-MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\b662bfd48c4652ba129b0372dbe355eb\transformed\glide-5.0.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d13e708798841faf14605f8fab2c2c56\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:2:1-26:12
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\12c027c96c06f1778abd9f66eefee223\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:15:1-25:12
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\afdb25443e91791daf288ba5d3f84621\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\56a3c9a30746ee8395f48562acf17696\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:15:1-41:12
-MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9d4146f087066178d390bb3aefc83f44\transformed\navigationevent\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\65ae51b7738eab54449b88f05dbf7cbf\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\263d832abf98a3e1ac172cb64b7d3242\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\eaa22013f9ea1b2923b94b312597f4dd\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\dcd143878af37322dbcbbccfcefc9a80\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c371e94b41fbd365ea4aa8b3ba711f64\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\25d1989aefa088a785308d55f17a2c9f\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\82320042743495884b2df202eae5efe5\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7a0f4fabedc18c69c59a28d73244ab2b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\7f548194d5968ed32c131e096068818f\transformed\graphics-shapes-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8579950c56d0fae2c769090197b99b9\transformed\core-ktx-1.16.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\39d2a1869c93699888ce3c34db75c36c\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2538a53f2792da2c396bcacae36ac478\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0706454b68bafd18401ccb3e58c3f55\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\47b1afad5863f624f0014a6f319748dd\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\a82c321bc0bc850ce59bd7552fd512c9\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\53e3c53b9259062a70315b5f58e43ee1\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\f798198401038405e40c6e8bd30602ed\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\def9d79eb5143a0cf83c74cab1eee8e9\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9076ada091bd6795d810bf9b61511224\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\651a955ccd18e5844d85f633a9a9a8d8\transformed\datastore-core-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\7bb25be755a1f174dca813baaecb8a50\transformed\datastore-preferences-core-release\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\28a4cdf3b2de75bf6a9208866ed91ecb\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\d681783460a0af26c6a7047a2323a4cb\transformed\datastore-preferences-release\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f9766995bb074a39910387eb1fd42b0c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
-MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:16:1-26:12
-MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\0bae0d47c0a4d7e0b26b2fe0a4af1410\transformed\fragment-1.6.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\1e680cf5707ef802dfb1561800c8212e\transformed\activity-1.12.2\AndroidManifest.xml:17:1-22:12
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ecb7183028065a1783cb91d8c6d13876\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ba375d5b595ac2cd822727edb135ba14\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\969f185edd5ca6cb3981547e92661d38\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4c4096542b874864ec06e8e5d27d922\transformed\firebase-components-19.0.0\AndroidManifest.xml:15:1-20:12
-MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\2c682362b21e842f7f6e1f74d0874040\transformed\gifdecoder-5.0.5\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\f56f0ee4990119c94594358efc2e05d5\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d0733991875cdfd5b5d69576ca07589\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3794ed70125157a895019d30789b4767\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7463c40f493649eb2b033bb543757626\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\43e6e68befd6425436fe8d9aea7a8bfb\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c36eabed726af42061cde935867fb317\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3fe54b70cd6181ca6ecb64af6127b8ed\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5947080cdee7fb299461c2549baf7d14\transformed\runtime-annotation\AndroidManifest.xml:2:1-7:12
-MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\267d91a468607c361eb5b7a6fb0301fa\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8828ce41e98c5379a735c55ebdaa56e6\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:2:1-7:12
-MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\937f8000162b6d9a39a3987433342e52\transformed\disklrucache-5.0.5\AndroidManifest.xml:2:1-7:12
+ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-30:12
+INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:1-30:12
+MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\56edcdd94dc39f85b9272507497346e4\transformed\material-1.13.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f14c28d883fabdf3e5c5c3584ac1ae82\transformed\constraintlayout-2.2.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\1ac4e81b5f4761499069a039dca116ee\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8629ce8b456a346a9a81c743c9bd28f1\transformed\appcompat-1.7.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a28020ebb2434344feb5527f6f70451c\transformed\glide-5.0.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5daf716dcbe9cf911129434db9dd9856\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\fad6111f98e96f06ad69a909c7653f97\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:15:1-34:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2cb71e12af05dcf1c7c77bdce7552a4e\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\9c20c9bbf24f69b8a06e946a9cbe9d9a\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:15:1-41:12
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\b88a6b1799631edd55ef099f7be7a4f5\transformed\navigationevent\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\52db4defc5a8ac6d0d07902197c2b5a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\943d37b34a336d06d1ba52b76ebd2114\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e5cf4536d92b983a4ceb0e9f904e2475\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3e667ab5b770ce15b9096f3970f75c59\transformed\transition-1.5.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f35909fad4730b6f751e416277ba066e\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4d29d37cf424b6dbade4152bc612f39\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5aad19e3e6e00a8fb9c4bb1ca3a9b6d0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0b4fec3db573b5dfd33861a2a233dc74\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6c497e5634cd4977530444876a4c7ed7\transformed\graphics-shapes-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d732e3c052d4b1bc4f95e9f61d58c94\transformed\core-ktx-1.16.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\1bd5624e7dd8f84b65522837c807fab5\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7e9465001e2ed97f27f46f349de6c63e\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\175eceb0c21751f81244e54f6d90e241\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b2b2136bb640dc41700f0d42e2438f56\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\cf9850f11fb65d5c23d464646bda0488\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e9b03f714bfb2be483d856abc104f106\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba5b8533d3123c53e085f30f4acc9e5\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\fc6e6fe5408c764e7a60e9c084ab6db0\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\98136eda17bc6eb2b892e1f760c16121\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\750af0d973c17e7a14028d0b28b2a538\transformed\datastore-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\94c5db331a816fea650669ca1b61b2d9\transformed\datastore-preferences-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\5224027e1648279e4d1c0e671ee8ba98\transformed\datastore-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\6200e914046d5dd7d0dfec7503155988\transformed\datastore-preferences-release\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\688eaa0a3ea40bf659ecde4d454bed39\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\472dd976d0cc2009c252df80fe8c1f6c\transformed\fragment-1.6.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e6dc91e1d2280446c5bc5025f8a1538b\transformed\activity-1.12.2\AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\314e942f89e2c10eee8996683772549e\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b1dea2cc51327e7e80095a73e86f6348\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\283b003500391992da481e3907c9a90d\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d8644ce183858246922a6bf4b665dabe\transformed\firebase-components-19.0.0\AndroidManifest.xml:15:1-20:12
+MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\acaf23ea77950bb6a4dc03e3cc3d2ebd\transformed\gifdecoder-5.0.5\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\396fb9b4f6c5a6a38f638a1a15849e52\transformed\exifinterface-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba18dec7a7bf11315be1c9a3833c625\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\606b2c2a6c6e24832bc549a2855d2f62\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e12c5fb218fbfc47d0058d899ae27097\transformed\tracing-1.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5191d7d7850ef72c2d7b3c48dcd1fc09\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\19999693e37128a3cbda8cd85a79e387\transformed\core-viewtree-1.0.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6058628fe0a3f9a35b2f05dff3ea2174\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7fd8cefa6967f7e9e3d958dd844f78cd\transformed\runtime-annotation\AndroidManifest.xml:2:1-7:12
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\0c595d29f686ee6a97925841d3d4b999\transformed\grpc-android-1.62.2\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ccea6827ffd91c462a8525c97a1ef43\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:2:1-7:12
+MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a03a0eb37cb162e807c968fb4b822ac6\transformed\disklrucache-5.0.5\AndroidManifest.xml:2:1-7:12
 	package
 		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:3:5-36
 		INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
@@ -75,42 +78,48 @@ MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.grad
 	xmlns:android
 		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:5:5-25:19
-INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:5:5-25:19
-MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8bc5880ef97d60be5c6368d24477ce3\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8bc5880ef97d60be5c6368d24477ce3\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\53aad099c6ed581afcd75b86e2a8000c\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\53aad099c6ed581afcd75b86e2a8000c\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:13:5-24:19
-MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:13:5-24:19
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\12c027c96c06f1778abd9f66eefee223\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\12c027c96c06f1778abd9f66eefee223\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:23:5-20
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\56a3c9a30746ee8395f48562acf17696\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\56a3c9a30746ee8395f48562acf17696\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:22:5-39:19
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:22:5-39:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f9766995bb074a39910387eb1fd42b0c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f9766995bb074a39910387eb1fd42b0c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
-MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:20:5-24:19
-MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:20:5-24:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3794ed70125157a895019d30789b4767\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3794ed70125157a895019d30789b4767\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:5:5-28:19
+INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:5:5-28:19
+MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\56edcdd94dc39f85b9272507497346e4\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\56edcdd94dc39f85b9272507497346e4\transformed\material-1.13.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f14c28d883fabdf3e5c5c3584ac1ae82\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f14c28d883fabdf3e5c5c3584ac1ae82\transformed\constraintlayout-2.2.1\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:13:5-24:19
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:26:5-37:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:21:5-32:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2cb71e12af05dcf1c7c77bdce7552a4e\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2cb71e12af05dcf1c7c77bdce7552a4e\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\9c20c9bbf24f69b8a06e946a9cbe9d9a\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\9c20c9bbf24f69b8a06e946a9cbe9d9a\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:22:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\688eaa0a3ea40bf659ecde4d454bed39\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\688eaa0a3ea40bf659ecde4d454bed39\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\606b2c2a6c6e24832bc549a2855d2f62\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\606b2c2a6c6e24832bc549a2855d2f62\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:extractNativeLibs
 		INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
 		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:10:9-35
 	android:label
@@ -147,289 +156,343 @@ activity#com.example.clothshop.activity.admin.AdminProductDetailActivity
 ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:23:9-79
 	android:name
 		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:23:19-76
+activity#com.example.clothshop.activity.admin.AdminProductEditActivity
+ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:24:9-26:57
+	android:screenOrientation
+		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:25:13-49
+	android:windowSoftInputMode
+		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:26:13-55
+	android:name
+		ADDED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml:24:19-74
 uses-sdk
 INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
 INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
-MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8bc5880ef97d60be5c6368d24477ce3\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8bc5880ef97d60be5c6368d24477ce3\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\53aad099c6ed581afcd75b86e2a8000c\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\53aad099c6ed581afcd75b86e2a8000c\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6a646e5ba78e223ebbe5a367a11c16c5\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6a646e5ba78e223ebbe5a367a11c16c5\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\668c043275edafc6098b81d6810a264c\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\668c043275edafc6098b81d6810a264c\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
-MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\b662bfd48c4652ba129b0372dbe355eb\transformed\glide-5.0.5\AndroidManifest.xml:5:5-44
-MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\b662bfd48c4652ba129b0372dbe355eb\transformed\glide-5.0.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d13e708798841faf14605f8fab2c2c56\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d13e708798841faf14605f8fab2c2c56\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:6:5-44
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\12c027c96c06f1778abd9f66eefee223\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\12c027c96c06f1778abd9f66eefee223\transformed\firebase-appcheck-interop-17.0.0\AndroidManifest.xml:18:5-20:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\afdb25443e91791daf288ba5d3f84621\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\afdb25443e91791daf288ba5d3f84621\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\56a3c9a30746ee8395f48562acf17696\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\56a3c9a30746ee8395f48562acf17696\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:19:5-44
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:19:5-44
-MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9d4146f087066178d390bb3aefc83f44\transformed\navigationevent\AndroidManifest.xml:5:5-44
-MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9d4146f087066178d390bb3aefc83f44\transformed\navigationevent\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\65ae51b7738eab54449b88f05dbf7cbf\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\65ae51b7738eab54449b88f05dbf7cbf\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\263d832abf98a3e1ac172cb64b7d3242\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\263d832abf98a3e1ac172cb64b7d3242\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\eaa22013f9ea1b2923b94b312597f4dd\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\eaa22013f9ea1b2923b94b312597f4dd\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\dcd143878af37322dbcbbccfcefc9a80\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\dcd143878af37322dbcbbccfcefc9a80\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c371e94b41fbd365ea4aa8b3ba711f64\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c371e94b41fbd365ea4aa8b3ba711f64\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\25d1989aefa088a785308d55f17a2c9f\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\25d1989aefa088a785308d55f17a2c9f\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\82320042743495884b2df202eae5efe5\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\82320042743495884b2df202eae5efe5\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7a0f4fabedc18c69c59a28d73244ab2b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7a0f4fabedc18c69c59a28d73244ab2b\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\7f548194d5968ed32c131e096068818f\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\7f548194d5968ed32c131e096068818f\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8579950c56d0fae2c769090197b99b9\transformed\core-ktx-1.16.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c8579950c56d0fae2c769090197b99b9\transformed\core-ktx-1.16.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\39d2a1869c93699888ce3c34db75c36c\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\39d2a1869c93699888ce3c34db75c36c\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2538a53f2792da2c396bcacae36ac478\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2538a53f2792da2c396bcacae36ac478\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0706454b68bafd18401ccb3e58c3f55\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0706454b68bafd18401ccb3e58c3f55\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\47b1afad5863f624f0014a6f319748dd\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\47b1afad5863f624f0014a6f319748dd\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\a82c321bc0bc850ce59bd7552fd512c9\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\a82c321bc0bc850ce59bd7552fd512c9\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\53e3c53b9259062a70315b5f58e43ee1\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\53e3c53b9259062a70315b5f58e43ee1\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\f798198401038405e40c6e8bd30602ed\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\f798198401038405e40c6e8bd30602ed\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\def9d79eb5143a0cf83c74cab1eee8e9\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\def9d79eb5143a0cf83c74cab1eee8e9\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9076ada091bd6795d810bf9b61511224\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\9076ada091bd6795d810bf9b61511224\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\651a955ccd18e5844d85f633a9a9a8d8\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\651a955ccd18e5844d85f633a9a9a8d8\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\7bb25be755a1f174dca813baaecb8a50\transformed\datastore-preferences-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\7bb25be755a1f174dca813baaecb8a50\transformed\datastore-preferences-core-release\AndroidManifest.xml:5:5-44
-MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\28a4cdf3b2de75bf6a9208866ed91ecb\transformed\datastore-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\28a4cdf3b2de75bf6a9208866ed91ecb\transformed\datastore-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\d681783460a0af26c6a7047a2323a4cb\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
-MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\d681783460a0af26c6a7047a2323a4cb\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f9766995bb074a39910387eb1fd42b0c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f9766995bb074a39910387eb1fd42b0c\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\0bae0d47c0a4d7e0b26b2fe0a4af1410\transformed\fragment-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\0bae0d47c0a4d7e0b26b2fe0a4af1410\transformed\fragment-1.6.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\1e680cf5707ef802dfb1561800c8212e\transformed\activity-1.12.2\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\1e680cf5707ef802dfb1561800c8212e\transformed\activity-1.12.2\AndroidManifest.xml:20:5-44
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ecb7183028065a1783cb91d8c6d13876\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ecb7183028065a1783cb91d8c6d13876\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ba375d5b595ac2cd822727edb135ba14\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\ba375d5b595ac2cd822727edb135ba14\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\969f185edd5ca6cb3981547e92661d38\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\969f185edd5ca6cb3981547e92661d38\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4c4096542b874864ec06e8e5d27d922\transformed\firebase-components-19.0.0\AndroidManifest.xml:18:5-44
-MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4c4096542b874864ec06e8e5d27d922\transformed\firebase-components-19.0.0\AndroidManifest.xml:18:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\2c682362b21e842f7f6e1f74d0874040\transformed\gifdecoder-5.0.5\AndroidManifest.xml:5:5-44
-MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\2c682362b21e842f7f6e1f74d0874040\transformed\gifdecoder-5.0.5\AndroidManifest.xml:5:5-44
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\f56f0ee4990119c94594358efc2e05d5\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\f56f0ee4990119c94594358efc2e05d5\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d0733991875cdfd5b5d69576ca07589\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d0733991875cdfd5b5d69576ca07589\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3794ed70125157a895019d30789b4767\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3794ed70125157a895019d30789b4767\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7463c40f493649eb2b033bb543757626\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7463c40f493649eb2b033bb543757626\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\43e6e68befd6425436fe8d9aea7a8bfb\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\43e6e68befd6425436fe8d9aea7a8bfb\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c36eabed726af42061cde935867fb317\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\c36eabed726af42061cde935867fb317\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3fe54b70cd6181ca6ecb64af6127b8ed\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\3fe54b70cd6181ca6ecb64af6127b8ed\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5947080cdee7fb299461c2549baf7d14\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5947080cdee7fb299461c2549baf7d14\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
-MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\267d91a468607c361eb5b7a6fb0301fa\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
-MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\267d91a468607c361eb5b7a6fb0301fa\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8828ce41e98c5379a735c55ebdaa56e6\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8828ce41e98c5379a735c55ebdaa56e6\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
-MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\937f8000162b6d9a39a3987433342e52\transformed\disklrucache-5.0.5\AndroidManifest.xml:5:5-44
-MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\937f8000162b6d9a39a3987433342e52\transformed\disklrucache-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\56edcdd94dc39f85b9272507497346e4\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.13.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\56edcdd94dc39f85b9272507497346e4\transformed\material-1.13.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f14c28d883fabdf3e5c5c3584ac1ae82\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f14c28d883fabdf3e5c5c3584ac1ae82\transformed\constraintlayout-2.2.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\1ac4e81b5f4761499069a039dca116ee\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\1ac4e81b5f4761499069a039dca116ee\transformed\appcompat-resources-1.7.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8629ce8b456a346a9a81c743c9bd28f1\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.appcompat:appcompat:1.7.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8629ce8b456a346a9a81c743c9bd28f1\transformed\appcompat-1.7.1\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a28020ebb2434344feb5527f6f70451c\transformed\glide-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:glide:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a28020ebb2434344feb5527f6f70451c\transformed\glide-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5daf716dcbe9cf911129434db9dd9856\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5daf716dcbe9cf911129434db9dd9856\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:6:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\fad6111f98e96f06ad69a909c7653f97\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\fad6111f98e96f06ad69a909c7653f97\transformed\firebase-database-collection-18.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2cb71e12af05dcf1c7c77bdce7552a4e\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\2cb71e12af05dcf1c7c77bdce7552a4e\transformed\firebase-appcheck-interop-17.1.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\9c20c9bbf24f69b8a06e946a9cbe9d9a\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\9c20c9bbf24f69b8a06e946a9cbe9d9a\transformed\firebase-auth-interop-19.0.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:19:5-44
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\b88a6b1799631edd55ef099f7be7a4f5\transformed\navigationevent\AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigationevent:navigationevent-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\b88a6b1799631edd55ef099f7be7a4f5\transformed\navigationevent\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\52db4defc5a8ac6d0d07902197c2b5a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\52db4defc5a8ac6d0d07902197c2b5a6\transformed\emoji2-views-helper-1.3.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\943d37b34a336d06d1ba52b76ebd2114\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\943d37b34a336d06d1ba52b76ebd2114\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e5cf4536d92b983a4ceb0e9f904e2475\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e5cf4536d92b983a4ceb0e9f904e2475\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3e667ab5b770ce15b9096f3970f75c59\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.transition:transition:1.5.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3e667ab5b770ce15b9096f3970f75c59\transformed\transition-1.5.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f35909fad4730b6f751e416277ba066e\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\f35909fad4730b6f751e416277ba066e\transformed\dynamicanimation-1.1.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4d29d37cf424b6dbade4152bc612f39\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\f4d29d37cf424b6dbade4152bc612f39\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5aad19e3e6e00a8fb9c4bb1ca3a9b6d0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5aad19e3e6e00a8fb9c4bb1ca3a9b6d0\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0b4fec3db573b5dfd33861a2a233dc74\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0b4fec3db573b5dfd33861a2a233dc74\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6c497e5634cd4977530444876a4c7ed7\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.graphics:graphics-shapes-android:1.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6c497e5634cd4977530444876a4c7ed7\transformed\graphics-shapes-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d732e3c052d4b1bc4f95e9f61d58c94\transformed\core-ktx-1.16.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\0d732e3c052d4b1bc4f95e9f61d58c94\transformed\core-ktx-1.16.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\1bd5624e7dd8f84b65522837c807fab5\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\1bd5624e7dd8f84b65522837c807fab5\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7e9465001e2ed97f27f46f349de6c63e\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7e9465001e2ed97f27f46f349de6c63e\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\175eceb0c21751f81244e54f6d90e241\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\175eceb0c21751f81244e54f6d90e241\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b2b2136bb640dc41700f0d42e2438f56\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b2b2136bb640dc41700f0d42e2438f56\transformed\lifecycle-viewmodel-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\cf9850f11fb65d5c23d464646bda0488\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\cf9850f11fb65d5c23d464646bda0488\transformed\lifecycle-livedata-core-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e9b03f714bfb2be483d856abc104f106\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e9b03f714bfb2be483d856abc104f106\transformed\lifecycle-livedata-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba5b8533d3123c53e085f30f4acc9e5\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba5b8533d3123c53e085f30f4acc9e5\transformed\lifecycle-runtime-2.6.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\fc6e6fe5408c764e7a60e9c084ab6db0\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\fc6e6fe5408c764e7a60e9c084ab6db0\transformed\lifecycle-viewmodel-savedstate-2.6.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\98136eda17bc6eb2b892e1f760c16121\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\98136eda17bc6eb2b892e1f760c16121\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\750af0d973c17e7a14028d0b28b2a538\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\750af0d973c17e7a14028d0b28b2a538\transformed\datastore-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\94c5db331a816fea650669ca1b61b2d9\transformed\datastore-preferences-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-preferences-core-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\94c5db331a816fea650669ca1b61b2d9\transformed\datastore-preferences-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\5224027e1648279e4d1c0e671ee8ba98\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\5224027e1648279e4d1c0e671ee8ba98\transformed\datastore-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\6200e914046d5dd7d0dfec7503155988\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.datastore:datastore-preferences-android:1.1.7] C:\Users\LEGION\.gradle\caches\8.13\transforms\6200e914046d5dd7d0dfec7503155988\transformed\datastore-preferences-release\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\688eaa0a3ea40bf659ecde4d454bed39\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\688eaa0a3ea40bf659ecde4d454bed39\transformed\play-services-tasks-18.1.0\AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\472dd976d0cc2009c252df80fe8c1f6c\transformed\fragment-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.6.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\472dd976d0cc2009c252df80fe8c1f6c\transformed\fragment-1.6.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e6dc91e1d2280446c5bc5025f8a1538b\transformed\activity-1.12.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.12.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\e6dc91e1d2280446c5bc5025f8a1538b\transformed\activity-1.12.2\AndroidManifest.xml:20:5-44
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\314e942f89e2c10eee8996683772549e\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:3.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\314e942f89e2c10eee8996683772549e\transformed\MPAndroidChart-3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b1dea2cc51327e7e80095a73e86f6348\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b1dea2cc51327e7e80095a73e86f6348\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\283b003500391992da481e3907c9a90d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\283b003500391992da481e3907c9a90d\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d8644ce183858246922a6bf4b665dabe\transformed\firebase-components-19.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:19.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\d8644ce183858246922a6bf4b665dabe\transformed\firebase-components-19.0.0\AndroidManifest.xml:18:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\acaf23ea77950bb6a4dc03e3cc3d2ebd\transformed\gifdecoder-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\acaf23ea77950bb6a4dc03e3cc3d2ebd\transformed\gifdecoder-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\396fb9b4f6c5a6a38f638a1a15849e52\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.6] C:\Users\LEGION\.gradle\caches\8.13\transforms\396fb9b4f6c5a6a38f638a1a15849e52\transformed\exifinterface-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba18dec7a7bf11315be1c9a3833c625\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ba18dec7a7bf11315be1c9a3833c625\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\606b2c2a6c6e24832bc549a2855d2f62\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\606b2c2a6c6e24832bc549a2855d2f62\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e12c5fb218fbfc47d0058d899ae27097\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\e12c5fb218fbfc47d0058d899ae27097\transformed\tracing-1.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5191d7d7850ef72c2d7b3c48dcd1fc09\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\5191d7d7850ef72c2d7b3c48dcd1fc09\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\19999693e37128a3cbda8cd85a79e387\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\19999693e37128a3cbda8cd85a79e387\transformed\core-viewtree-1.0.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6058628fe0a3f9a35b2f05dff3ea2174\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.4.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6058628fe0a3f9a35b2f05dff3ea2174\transformed\annotation-experimental-1.4.1\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7fd8cefa6967f7e9e3d958dd844f78cd\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-annotation-android:1.9.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\7fd8cefa6967f7e9e3d958dd844f78cd\transformed\runtime-annotation\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\0c595d29f686ee6a97925841d3d4b999\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\0c595d29f686ee6a97925841d3d4b999\transformed\grpc-android-1.62.2\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ccea6827ffd91c462a8525c97a1ef43\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6ccea6827ffd91c462a8525c97a1ef43\transformed\protolite-well-known-types-18.0.1\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a03a0eb37cb162e807c968fb4b822ac6\transformed\disklrucache-5.0.5\AndroidManifest.xml:5:5-44
+MERGED from [com.github.bumptech.glide:disklrucache:5.0.5] C:\Users\LEGION\.gradle\caches\8.13\transforms\a03a0eb37cb162e807c968fb4b822ac6\transformed\disklrucache-5.0.5\AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
 		INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from E:\Storm\LTDD\ClothShop\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:10:5-79
-MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\267d91a468607c361eb5b7a6fb0301fa\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
-MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\267d91a468607c361eb5b7a6fb0301fa\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:10:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:23:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\0c595d29f686ee6a97925841d3d4b999\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
+MERGED from [io.grpc:grpc-android:1.62.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\0c595d29f686ee6a97925841d3d4b999\transformed\grpc-android-1.62.2\AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:10:22-76
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:10:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:11:5-67
+ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:24:5-67
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:24:5-67
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:11:22-64
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:11:22-64
 service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:14:9-23:19
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:30:9-38:19
-MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:30:9-38:19
+ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:14:9-23:19
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:27:9-36:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:22:9-31:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:30:9-38:19
 	android:exported
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:16:13-37
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:16:13-37
 	tools:targetApi
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:34:13-32
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:34:13-32
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:32:13-43
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:32:13-43
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:15:13-84
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:15:13-84
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirebaseFirestoreKtxRegistrar
-ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:17:13-19:85
+ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:17:13-19:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:19:17-82
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:19:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:18:17-122
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:18:17-122
 meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:20:13-22:85
+ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:20:13-22:85
 	android:value
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:22:17-82
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:22:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\57da8a9c218c201e5fecd02118e4b242\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:21:17-111
+		ADDED from [com.google.firebase:firebase-firestore:26.0.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\c2f2e58bf8af5d4862a4135090e10d92\transformed\firebase-firestore-26.0.2\AndroidManifest.xml:21:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:31:17-118
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\15fbbe46198875834fd7ca74ca0769de\transformed\firebase-storage-21.0.0\AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:25:13-27:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:27:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:26:17-120
+meta-data#com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar
+ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-appcheck:17.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a7770800a76741b9c2901a9e2fc81732\transformed\firebase-appcheck-17.1.0\AndroidManifest.xml:29:17-117
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
+ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:9-22:45
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:22:19-43
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:21:19-78
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\786a762e30e474f447354b8ba0513daa\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a93567533bf26dadb16845c71f0d8ade\transformed\play-services-base-18.1.0\AndroidManifest.xml:20:19-85
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:21.0.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\3eb9059939ca308f832dfb560f8e5813\transformed\firebase-common-ktx-21.0.0\AndroidManifest.xml:13:17-116
 provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:23:9-28:39
+ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:23:9-28:39
 	android:authorities
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:25:13-72
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:25:13-72
 	android:exported
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:27:13-37
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:27:13-37
 	android:directBootAware
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:26:13-43
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:26:13-43
 	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:28:13-36
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:28:13-36
 	android:name
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:24:13-77
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:24:13-77
 meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
-ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:35:13-37:85
+ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:35:13-37:85
 	android:value
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:37:17-82
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:37:17-82
 	android:name
-		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\8395947b353d6f48884f504a4de5668f\transformed\firebase-common-22.0.1\AndroidManifest.xml:36:17-109
+		ADDED from [com.google.firebase:firebase-common:22.0.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\6bce2ad3feca91102fa3e4104011067a\transformed\firebase-common-22.0.1\AndroidManifest.xml:36:17-109
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0104fe782befd4787886101da9b6e3a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\LEGION\.gradle\caches\8.13\transforms\094ced47421736cddaab26c57b1f355a\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\cb40fe3b2334790feb02d45789b23424\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\994aca50a501ec739e4083311a32756e\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
 permission#com.example.clothshop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
 uses-permission#com.example.clothshop.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\470566fc92947b2ead1b7b6adeafb6d8\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.16.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\a0705c80e65c4ed5b34776bc06820d52\transformed\core-1.16.0\AndroidManifest.xml:26:22-94
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\b0f792875ce24e1a2035eca56769f512\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\LEGION\.gradle\caches\8.13\transforms\314ce754bf101eb5328c2fa51be39fb1\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:30:17-78
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\151243df957b937561ed006fd56b112b\transformed\play-services-basement-18.8.0\AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:18.8.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\b16a29b020eef7afc10f8b4042b02344\transformed\play-services-basement-18.8.0\AndroidManifest.xml:22:13-58
 meta-data#androidx.profileinstaller.ProfileInstallerInitializer
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
 receiver#androidx.profileinstaller.ProfileInstallReceiver
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
 	android:enabled
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
 	android:exported
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
 	android:permission
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
 	android:directBootAware
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
 intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
 action#androidx.profileinstaller.action.INSTALL_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
 intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
 action#androidx.profileinstaller.action.SKIP_FILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
 intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
 action#androidx.profileinstaller.action.SAVE_PROFILE
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
 intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
 action#androidx.profileinstaller.action.BENCHMARK_OPERATION
-ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\9dccc14cb8e3405af42fe4fade143d90\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+		ADDED from [androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\LEGION\.gradle\caches\8.13\transforms\793f50b257353730806bdd8ec5a6e012\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92

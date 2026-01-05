@@ -4,7 +4,24 @@
             "outputFile": "com.example.clothshop.app-mergeDebugResources-43:/values-ro/values-ro.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\668c043275edafc6098b81d6810a264c\\transformed\\appcompat-1.7.1\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\b16a29b020eef7afc10f8b4042b02344\\transformed\\play-services-basement-18.8.0\\res\\values-ro\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "218",
+                        "endColumns": "139",
+                        "endOffsets": "357"
+                    },
+                    "to": {
+                        "startLines": "56",
+                        "startColumns": "4",
+                        "startOffsets": "5516",
+                        "endColumns": "143",
+                        "endOffsets": "5655"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\8629ce8b456a346a9a81c743c9bd28f1\\transformed\\appcompat-1.7.1\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,24 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\786a762e30e474f447354b8ba0513daa\\transformed\\play-services-base-18.1.0\\res\\values-ro\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,296,452,577,682,829,957,1076,1181,1339,1445,1600,1728,1870,2032,2099,2162",
-                        "endColumns": "102,155,124,104,146,127,118,104,157,105,154,127,141,161,66,62,77",
-                        "endOffsets": "295,451,576,681,828,956,1075,1180,1338,1444,1599,1727,1869,2031,2098,2161,2239"
-                    },
-                    "to": {
-                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4496,4603,4763,4892,5001,5152,5284,5407,5660,5822,5932,6091,6223,6369,6535,6606,6673",
-                        "endColumns": "106,159,128,108,150,131,122,108,161,109,158,131,145,165,70,66,81",
-                        "endOffsets": "4598,4758,4887,4996,5147,5279,5402,5511,5817,5927,6086,6218,6364,6530,6601,6668,6750"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\c8bc5880ef97d60be5c6368d24477ce3\\transformed\\material-1.13.0\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\56edcdd94dc39f85b9272507497346e4\\transformed\\material-1.13.0\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +57,24 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\151243df957b937561ed006fd56b112b\\transformed\\play-services-basement-18.8.0\\res\\values-ro\\values.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\a93567533bf26dadb16845c71f0d8ade\\transformed\\play-services-base-18.1.0\\res\\values-ro\\values.xml",
                     "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "218",
-                        "endColumns": "139",
-                        "endOffsets": "357"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,296,452,577,682,829,957,1076,1181,1339,1445,1600,1728,1870,2032,2099,2162",
+                        "endColumns": "102,155,124,104,146,127,118,104,157,105,154,127,141,161,66,62,77",
+                        "endOffsets": "295,451,576,681,828,956,1075,1180,1338,1444,1599,1727,1869,2031,2098,2161,2239"
                     },
                     "to": {
-                        "startLines": "56",
-                        "startColumns": "4",
-                        "startOffsets": "5516",
-                        "endColumns": "143",
-                        "endOffsets": "5655"
+                        "startLines": "48,49,50,51,52,53,54,55,57,58,59,60,61,62,63,64,65",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4496,4603,4763,4892,5001,5152,5284,5407,5660,5822,5932,6091,6223,6369,6535,6606,6673",
+                        "endColumns": "106,159,128,108,150,131,122,108,161,109,158,131,145,165,70,66,81",
+                        "endOffsets": "4598,4758,4887,4996,5147,5279,5402,5511,5817,5927,6086,6218,6364,6530,6601,6668,6750"
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\470566fc92947b2ead1b7b6adeafb6d8\\transformed\\core-1.16.0\\res\\values-ro\\values-ro.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\a0705c80e65c4ed5b34776bc06820d52\\transformed\\core-1.16.0\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

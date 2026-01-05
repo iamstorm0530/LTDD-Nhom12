@@ -21,6 +21,9 @@
         </activity>
         <activity android:name=".activity.admin.AdminProductActivity" />
         <activity android:name=".activity.admin.AdminProductDetailActivity" />
+        <activity android:name=".activity.admin.AdminProductEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"/>
 
     </application>
 

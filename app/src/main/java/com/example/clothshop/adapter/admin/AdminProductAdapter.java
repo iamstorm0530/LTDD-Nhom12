@@ -1,6 +1,7 @@
 package com.example.clothshop.adapter.admin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.view.LayoutInflater;
@@ -15,6 +16,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.clothshop.R;
+import com.example.clothshop.activity.admin.AdminProductDetailActivity;
+import com.example.clothshop.activity.admin.AdminProductEditActivity; // Import Activity Edit
 import com.example.clothshop.model.Product;
 import com.example.clothshop.model.SortType;
 import com.example.clothshop.model.Variant;
@@ -44,43 +47,30 @@ public class AdminProductAdapter
     public void filter(String keyword, String tag, Set<String> statuses) {
         displayList.clear();
 
-        // --- GROUP 1: STATUS ---
         boolean filterActive = statuses.contains("ACTIVE");
         boolean filterHidden = statuses.contains("HIDDEN");
-
-        // --- GROUP 2: STOCK ---
         boolean filterOut = statuses.contains("OUT_OF_STOCK");
         boolean filterLow = statuses.contains("LOW_STOCK");
         boolean filterIn  = statuses.contains("IN_STOCK");
-
-        // --- GROUP 3: SALE  ---
         boolean filterOnSale = statuses.contains("ON_SALE");
         boolean filterNoSale = statuses.contains("NO_SALE");
 
         for (Product p : productList) {
-
-            // 1. Search Logic
+            // Search
             if (keyword != null && !keyword.isEmpty()) {
                 if (p.getName() == null || !p.getName().toLowerCase().contains(keyword.toLowerCase())) continue;
             }
-
-            // 2. Tag Logic
+            // Tag
             if (!"ALL".equalsIgnoreCase(tag)) {
                 if (p.getTag() == null || !p.getTag().equalsIgnoreCase(tag)) continue;
             }
-
-            // 3. Status Logic (AND)
+            // Status
             if (filterActive || filterHidden) {
-                if (filterActive && filterHidden) {
-                    // allow both
-                } else if (filterActive) {
-                    if (!"active".equalsIgnoreCase(p.getStatus())) continue;
-                } else {
-                    if (!"hidden".equalsIgnoreCase(p.getStatus())) continue;
-                }
+                if (filterActive && filterHidden) {}
+                else if (filterActive) { if (!"active".equalsIgnoreCase(p.getStatus())) continue; }
+                else { if (!"hidden".equalsIgnoreCase(p.getStatus())) continue; }
             }
-
-            // 4. Stock Logic (AND)
+            // Stock
             if (filterOut || filterLow || filterIn) {
                 boolean hasOut = false, hasLow = false, hasIn = false;
                 if (p.getVariants() != null) {
@@ -93,16 +83,13 @@ public class AdminProductAdapter
                 if (filterLow && !hasLow) continue;
                 if (filterIn && !hasIn) continue;
             }
-
-            // 5. Sale Logic (AND)
+            // Sale
             if (filterOnSale || filterNoSale) {
                 boolean matchesSale = false;
-
                 if (filterOnSale && p.isOnSale()) matchesSale = true;
                 if (filterNoSale && !p.isOnSale()) matchesSale = true;
                 if (!matchesSale) continue;
             }
-
             displayList.add(p);
         }
         applySort();
@@ -137,8 +124,21 @@ public class AdminProductAdapter
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder h, int pos) {
         Product p = displayList.get(pos);
+        Context context = h.itemView.getContext();
 
         h.tvName.setText(p.getName());
+
+        h.btnEdit.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AdminProductEditActivity.class);
+            intent.putExtra("productId", p.getId());
+            context.startActivity(intent);
+        });
+
+        h.itemView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, AdminProductDetailActivity.class);
+            intent.putExtra("productId", p.getId());
+            context.startActivity(intent);
+        });
 
         // ================= LOGIC SALE UI =================
         if (p.isOnSale()) {
@@ -146,7 +146,6 @@ public class AdminProductAdapter
             h.tvPrice.setTextColor(Color.parseColor("#D32F2F"));
 
             h.layoutSale.setVisibility(View.VISIBLE);
-
             h.tvSaleStatus.setText("ON SALE");
             h.tvSaleStatus.setBackgroundResource(R.drawable.bg_border_red);
             h.tvSaleStatus.setTextColor(Color.parseColor("#D32F2F"));
@@ -165,7 +164,7 @@ public class AdminProductAdapter
 
         } else {
             h.tvPrice.setText(CurrencyUtils.format(p.getPrice()));
-            h.tvPrice.setTextColor(Color.parseColor("#1C1C1E")); // Đen
+            h.tvPrice.setTextColor(Color.parseColor("#1C1C1E"));
 
             h.layoutSale.setVisibility(View.GONE);
             h.tvSalePrice.setPaintFlags(h.tvSalePrice.getPaintFlags() & (~Paint.STRIKE_THRU_TEXT_FLAG));
@@ -187,7 +186,7 @@ public class AdminProductAdapter
         }
 
         if (p.getImages() != null && !p.getImages().isEmpty()) {
-            Glide.with(h.itemView.getContext()).load(p.getImages().get(0)).centerCrop().into(h.imgProduct);
+            Glide.with(context).load(p.getImages().get(0)).centerCrop().into(h.imgProduct);
         } else {
             h.imgProduct.setImageResource(R.drawable.ic_launcher_background);
         }
@@ -195,15 +194,13 @@ public class AdminProductAdapter
         // ===== VARIANTS =====
         h.layoutVariants.removeAllViews();
         if (p.getVariants() == null) p.setVariants(new ArrayList<>());
-
         Map<String, Map<String, Variant>> colorMap = new LinkedHashMap<>();
         for (Variant v : p.getVariants()) {
             if (v == null || v.getColor() == null || v.getSize() == null) continue;
             colorMap.computeIfAbsent(v.getColor(), k -> new HashMap<>()).put(v.getSize(), v);
         }
-
         for (String color : colorMap.keySet()) {
-            h.layoutVariants.addView(createColorRow(h.itemView.getContext(), color, colorMap.get(color)));
+            h.layoutVariants.addView(createColorRow(context, color, colorMap.get(color)));
         }
     }
 
@@ -268,6 +265,7 @@ public class AdminProductAdapter
     // ================= VIEW HOLDER =================
     static class ProductViewHolder extends RecyclerView.ViewHolder {
         ImageView imgProduct;
+        ImageView btnEdit; // 🔥 Khai báo nút edit
         TextView tvName, tvPrice, tvStock, tvRating, tvTag, tvStatus;
         LinearLayout layoutSale;
         TextView tvSaleStatus, tvSalePercent, tvSalePrice;
@@ -276,6 +274,7 @@ public class AdminProductAdapter
         ProductViewHolder(@NonNull View v) {
             super(v);
             imgProduct = v.findViewById(R.id.imgProduct);
+            btnEdit = v.findViewById(R.id.btnEdit); // 🔥 Ánh xạ nút edit
             tvName = v.findViewById(R.id.tvName);
             tvPrice = v.findViewById(R.id.tvPrice);
             tvStock = v.findViewById(R.id.tvStock);

@@ -4,7 +4,7 @@
             "outputFile": "com.example.clothshop.app-mergeDebugResources-43:/values-or/values-or.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\668c043275edafc6098b81d6810a264c\\transformed\\appcompat-1.7.1\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\8629ce8b456a346a9a81c743c9bd28f1\\transformed\\appcompat-1.7.1\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\470566fc92947b2ead1b7b6adeafb6d8\\transformed\\core-1.16.0\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\a0705c80e65c4ed5b34776bc06820d52\\transformed\\core-1.16.0\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\c8bc5880ef97d60be5c6368d24477ce3\\transformed\\material-1.13.0\\res\\values-or\\values-or.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\56edcdd94dc39f85b9272507497346e4\\transformed\\material-1.13.0\\res\\values-or\\values-or.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -57,24 +57,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\786a762e30e474f447354b8ba0513daa\\transformed\\play-services-base-18.1.0\\res\\values-or\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "193,300,457,585,698,849,980,1090,1196,1359,1468,1625,1754,1900,2053,2114,2182",
-                        "endColumns": "106,156,127,112,150,130,109,105,162,108,156,128,145,152,60,67,82",
-                        "endOffsets": "299,456,584,697,848,979,1089,1195,1358,1467,1624,1753,1899,2052,2113,2181,2264"
-                    },
-                    "to": {
-                        "startLines": "47,48,49,50,51,52,53,54,56,57,58,59,60,61,62,63,64",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4408,4519,4680,4812,4929,5084,5219,5333,5583,5750,5863,6024,6157,6307,6464,6529,6601",
-                        "endColumns": "110,160,131,116,154,134,113,109,166,112,160,132,149,156,64,71,86",
-                        "endOffsets": "4514,4675,4807,4924,5079,5214,5328,5438,5745,5858,6019,6152,6302,6459,6524,6596,6683"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\151243df957b937561ed006fd56b112b\\transformed\\play-services-basement-18.8.0\\res\\values-or\\values.xml",
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\b16a29b020eef7afc10f8b4042b02344\\transformed\\play-services-basement-18.8.0\\res\\values-or\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -88,6 +71,23 @@
                         "startOffsets": "5443",
                         "endColumns": "139",
                         "endOffsets": "5578"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\LEGION\\.gradle\\caches\\8.13\\transforms\\a93567533bf26dadb16845c71f0d8ade\\transformed\\play-services-base-18.1.0\\res\\values-or\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "193,300,457,585,698,849,980,1090,1196,1359,1468,1625,1754,1900,2053,2114,2182",
+                        "endColumns": "106,156,127,112,150,130,109,105,162,108,156,128,145,152,60,67,82",
+                        "endOffsets": "299,456,584,697,848,979,1089,1195,1358,1467,1624,1753,1899,2052,2113,2181,2264"
+                    },
+                    "to": {
+                        "startLines": "47,48,49,50,51,52,53,54,56,57,58,59,60,61,62,63,64",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4408,4519,4680,4812,4929,5084,5219,5333,5583,5750,5863,6024,6157,6307,6464,6529,6601",
+                        "endColumns": "110,160,131,116,154,134,113,109,166,112,160,132,149,156,64,71,86",
+                        "endOffsets": "4514,4675,4807,4924,5079,5214,5328,5438,5745,5858,6019,6152,6302,6459,6524,6596,6683"
                     }
                 }
             ]
